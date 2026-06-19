@@ -650,6 +650,16 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .agenda .ag-row:hover .ag-go{opacity:1;transform:translate(3px,-3px)}
 @media(max-width:767px){.agenda .ag-go{display:none}.agenda .ag-line{color:var(--color-gray-400)}}
 </style>
+<style id="harmonia-banner">
+.hh-banner{position:relative;background:#0b0b0c;overflow:hidden}
+.hh-banner::before{content:"";position:absolute;inset:0;background-image:var(--hh-img);background-size:cover;background-position:center;transform:scale(1.04)}
+.hh-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,9,.85) 0%,rgba(8,8,9,.5) 52%,rgba(8,8,9,.28) 100%)}
+.hh-banner-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:clamp(18px,2vw,30px);min-height:clamp(440px,62vh,680px);padding-block:clamp(60px,8vw,120px);color:#fff}
+.hh-banner-kicker{margin:0;font-size:13px;letter-spacing:.3em;color:rgba(255,255,255,.82)}
+.hh-banner-title{margin:0;font-size:clamp(40px,6.5vw,104px);font-weight:800;line-height:.95;letter-spacing:.005em;text-transform:uppercase;color:#fff;max-width:16ch}
+.hh-banner-cta{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:#fff;border:1px solid rgba(255,255,255,.45);padding:15px 28px;transition:background .25s ease,border-color .25s ease}
+.hh-banner-cta:hover{background:var(--color-red);border-color:var(--color-red)}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -1100,6 +1110,13 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         <p>Non è solo un party. È un ecosistema. Colorato, mutante, vivo.</p>
       </div>
     </div>
+  </div>
+</section>
+<section class="hh-banner" style="--hh-img:url('/harmonia/foto/crowd-1.jpg')">
+  <div class="container hh-banner-inner">
+    <p class="hh-banner-kicker">HARMONIA</p>
+    <h2 class="hh-banner-title">Non esistono<br>due serate uguali</h2>
+    <a class="hh-banner-cta" href="/eventi">SCOPRI LE DATE <span aria-hidden="true">&#8599;</span></a>
   </div>
 </section>
 <section class="bg-white home-cards">

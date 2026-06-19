@@ -185,6 +185,41 @@
 @media (max-width:1023px){.hh-nav{display:none}.hh-burger{display:inline-flex}.hh-bar{height:64px}.hh-logo img{height:26px}}
 @media (min-width:1024px){.hh-mobile{display:none!important}}
 </style>
+
+<style id="harmonia-polish">
+/* --- respiro premium: piu aria tra le sezioni --- */
+.py-huge{padding-block:clamp(84px,9vw,156px)}
+.py-bigger{padding-block:clamp(40px,5vw,72px)}
+section + section{position:relative}
+
+/* --- manifesto: corpo editoriale leggibile, non urlato --- */
+.manifesto .container{max-width:64rem}
+.manifesto .text-big.normal-case{
+  font-weight:500;
+  font-size:clamp(20px,2vw,30px);
+  line-height:1.5;
+  letter-spacing:.005em;
+  max-width:54ch;
+}
+.manifesto h2{letter-spacing:.01em;line-height:1.04}
+.manifesto > .container > .text-secondary{letter-spacing:.22em}
+
+/* --- griglie: hover uniforme e vivo, immagine che respira --- */
+.editorial-grid-item .aspect-\[3\/4\]{overflow:hidden}
+.editorial-grid-item img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.editorial-grid-item:hover img{transform:scale(1.05)}
+.editorial-grid-item .editorial-title{transition:color .25s ease}
+.editorial-grid-item:hover .editorial-title{color:var(--color-red)}
+
+/* card della home: stessa logica di hover, niente sbavature */
+section.bg-white .grid a.group{overflow:hidden}
+section.bg-white .grid a.group img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+section.bg-white .grid a.group:hover img{transform:scale(1.05)}
+
+/* --- micro tipografia: titoli piu nitidi --- */
+.text-h2-medium{letter-spacing:.01em}
+.text-h3{letter-spacing:.015em}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 

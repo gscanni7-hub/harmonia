@@ -567,6 +567,41 @@
 @media (max-width:1023px){.hh-nav{display:none}.hh-burger{display:inline-flex}.hh-bar{height:64px}.hh-logo img{height:26px}}
 @media (min-width:1024px){.hh-mobile{display:none!important}}
 </style>
+
+<style id="harmonia-polish">
+/* --- respiro premium: piu aria tra le sezioni --- */
+.py-huge{padding-block:clamp(84px,9vw,156px)}
+.py-bigger{padding-block:clamp(40px,5vw,72px)}
+section + section{position:relative}
+
+/* --- manifesto: corpo editoriale leggibile, non urlato --- */
+.manifesto .container{max-width:64rem}
+.manifesto .text-big.normal-case{
+  font-weight:500;
+  font-size:clamp(20px,2vw,30px);
+  line-height:1.5;
+  letter-spacing:.005em;
+  max-width:54ch;
+}
+.manifesto h2{letter-spacing:.01em;line-height:1.04}
+.manifesto > .container > .text-secondary{letter-spacing:.22em}
+
+/* --- griglie: hover uniforme e vivo, immagine che respira --- */
+.editorial-grid-item .aspect-\[3\/4\]{overflow:hidden}
+.editorial-grid-item img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.editorial-grid-item:hover img{transform:scale(1.05)}
+.editorial-grid-item .editorial-title{transition:color .25s ease}
+.editorial-grid-item:hover .editorial-title{color:var(--color-red)}
+
+/* card della home: stessa logica di hover, niente sbavature */
+section.bg-white .grid a.group{overflow:hidden}
+section.bg-white .grid a.group img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+section.bg-white .grid a.group:hover img{transform:scale(1.05)}
+
+/* --- micro tipografia: titoli piu nitidi --- */
+.text-h2-medium{letter-spacing:.01em}
+.text-h3{letter-spacing:.015em}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -944,14 +979,14 @@
 																																				
 
 
-<section class="bg-white-loco">
+<section class="bg-white-loco manifesto">
   <div class="container py-huge space-y-big lg:max-w-4xl">
     <p class="text-secondary">MANIFESTO</p>
     <h2 class="text-h2-medium">HARMONIA – CLUB TOGETHER</h2>
-    <p class="text-big leading-relaxed">Ispirato alla Harmonia Axyridis, Harmonia è un party che celebra l'eclettismo e la bellezza dell'incontro. Come i suoi puntini — ognuno unico, eppure parte dello stesso disegno — ogni persona che entra nel club è parte di un mosaico che dà colore al nostro universo.</p>
-<p class="text-big leading-relaxed">Non esistono due serate uguali: Harmonia è un habitat libero e fluido, dove le differenze si fondono in un'unica vibrazione condivisa. Qui il clubbing torna alla sua essenza più pura: un'esperienza collettiva, fisica e sensoriale. Zero pose, zero filtri. Solo musica, sudore e connessione vera.</p>
-<p class="text-big leading-relaxed">Harmonia è l'energia che scorre tra corpi che ballano insieme; è un ritmo che abbatte le barriere. È la casa di chi non cerca etichette, ma emozioni vere.</p>
-<p class="text-big leading-relaxed">Non è solo un party. È un ecosistema. Colorato, mutante, vivo.</p>
+    <p class="text-big leading-relaxed normal-case">Ispirato alla Harmonia Axyridis, Harmonia è un party che celebra l'eclettismo e la bellezza dell'incontro. Come i suoi puntini — ognuno unico, eppure parte dello stesso disegno — ogni persona che entra nel club è parte di un mosaico che dà colore al nostro universo.</p>
+<p class="text-big leading-relaxed normal-case">Non esistono due serate uguali: Harmonia è un habitat libero e fluido, dove le differenze si fondono in un'unica vibrazione condivisa. Qui il clubbing torna alla sua essenza più pura: un'esperienza collettiva, fisica e sensoriale. Zero pose, zero filtri. Solo musica, sudore e connessione vera.</p>
+<p class="text-big leading-relaxed normal-case">Harmonia è l'energia che scorre tra corpi che ballano insieme; è un ritmo che abbatte le barriere. È la casa di chi non cerca etichette, ma emozioni vere.</p>
+<p class="text-big leading-relaxed normal-case">Non è solo un party. È un ecosistema. Colorato, mutante, vivo.</p>
     <div class="flex items-center gap-big pt-big">
       <img src="/harmonia/brand/logo-simbolo.png" alt="" class="w-100 h-auto" style="width:90px">
       <p class="text-secondary">Non solo un party. Un ecosistema.</p>

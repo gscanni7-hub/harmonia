@@ -249,6 +249,27 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .text-h2-medium{letter-spacing:.01em}
 .text-h3{letter-spacing:.015em}
 </style>
+
+<style id="harmonia-eventi">
+.event-cd-block{display:grid;grid-template-columns:1fr;gap:clamp(20px,4vw,56px);align-items:stretch;border-bottom:1px solid var(--color-gray-200);padding-block:clamp(44px,6vw,90px)}
+@media(min-width:1024px){.event-cd-block{grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px)}}
+.event-cd-block .ev-media{overflow:hidden;aspect-ratio:4/3;background:#0c0c0c}
+@media(min-width:1024px){.event-cd-block .ev-media{aspect-ratio:auto;min-height:clamp(440px,42vw,580px)}}
+.event-cd-block .ev-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.event-cd-block:hover .ev-media img{transform:scale(1.04)}
+.event-cd-block .ev-info{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:clamp(16px,1.8vw,26px);padding:clamp(4px,2vw,24px) 0;text-align:left}
+.event-cd-block .ev-eyebrow{font-size:13px;letter-spacing:.24em;margin:0}
+.event-cd-block .ev-title{font-size:clamp(36px,5.2vw,72px);font-weight:800;line-height:.98;letter-spacing:.005em;text-transform:uppercase;margin:0}
+.event-cd-block .ev-lead{font-size:clamp(16px,1.25vw,19px);line-height:1.55;color:var(--color-gray-400);max-width:42ch;margin:0;text-transform:none}
+.event-cd-block .ev-status{font-size:clamp(22px,2.4vw,34px);font-weight:700;letter-spacing:.05em;margin:0}
+.event-cd-block .ev-countdown{display:flex;gap:clamp(18px,2.6vw,46px);margin:0}
+.event-cd-block .ev-cd-item{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.event-cd-block .ev-num{font-size:clamp(36px,4.6vw,66px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.event-cd-block .ev-unit{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-gray-400);margin-top:10px}
+.event-cd-block .ev-cta{display:inline-flex;align-items:center;gap:10px;background:var(--color-red);color:#fff;padding:15px 28px;border-radius:5px;font-size:14px;letter-spacing:.05em;margin-top:4px;transition:opacity .2s}
+.event-cd-block .ev-cta:hover{opacity:.88}
+[x-cloak]{display:none!important}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -327,147 +348,30 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 
 
 
-<div class="event-cd-block container flex flex-col lg:flex-row gap-big lg:gap-0 bg-white-loco" x-data="{
-       countdown: {
-         days: '-',
-         hours: '-',
-         minutes: '-',
-         seconds: '-'
-       },
-       isPreregistrationActive: false,
-       showCountdown: true,
-       countdownStatus: 'IN ARRIVO',
-       countdownLabel: 'DATA IN ANNUNCIO',
-       // Safari 15 fix: Use ISO 8601 format (Y-m-dTH:i:sZ) for better date parsing compatibility
-       eventDate: (() =&gt; {
-                  const dateStr = '';
-         if (!dateStr || dateStr === 'Z') return 0;
-         const date = new Date(dateStr);
-         return !isNaN(date.getTime()) ? date.getTime() : 0;
-                })(),
-       eventEndDate: (() =&gt; {
-                  return 0;
-                })(),
-       preregistrationEndDate: (() =&gt; {
-                  return 0;
-                })(),
-       interval: null,
-
-       updateCountdown() {
-         const now = new Date().getTime();
-         // Safari 15 fix: Check if dates are valid before calculating
-         if (!this.eventDate || isNaN(this.eventDate)) {
-           this.showCountdown = false;
-           this.countdownStatus = 'IN ARRIVO';
-           return;
-         }
-         const eventDistance = this.eventDate - now;
-
-         if (eventDistance &lt; 0) {
-           this.showCountdown = false;
-           const endedDistance = this.eventEndDate - now;
-           if (endedDistance &lt; 0) {
-             this.countdownStatus = 'ENDED';
-           } else {
-             this.countdownStatus = 'LIVE';
-           }
-           return;
-         }
-
-         // Always show event start countdown, never pre-registration countdown
-         this.countdownLabel = 'DATA IN ANNUNCIO';
-         this.updateCountdownDisplay(eventDistance);
-       },
-
-       updateCountdownDisplay(distance) {
-         // Safari 15 fix: Ensure distance is a valid number
-         if (isNaN(distance) || distance &lt; 0) {
-           this.countdown.days = '-';
-           this.countdown.hours = '-';
-           this.countdown.minutes = '-';
-           this.countdown.seconds = '-';
-           return;
-         }
-         this.countdown.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-         this.countdown.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-         this.countdown.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-         this.countdown.seconds = Math.floor((distance % (1000 * 60)) / 1000);
-       },
-
-       updateRegistrationState() {
-         const now = new Date().getTime();
-         this.isPreregistrationActive = now &lt; this.preregistrationEndDate;
-       },
-
-       updateAll() {
-         this.updateCountdown();
-         this.updateRegistrationState();
-       },
-
-       init() {
-         this.updateAll();
-         this.interval = setInterval(() =&gt; this.updateAll(), 1000);
-       }
-     }" x-init="init()">
-	<div class="cd-cover order-2 lg:order-1 relative">
-    <div class="lg:py-big lg:absolute lg:inset-0">
-      <div class=" media-wrapper mb-big lg-mb-0 h-full aspect-[4/5]">
-                        
-                
-    
-    
-    <img src="/harmonia/foto/crowd-2.jpg" alt="Harmonia" class="w-full h-full object-cover">
-  
-      </div>
-		</div>
-	</div>
-	<div class="cd-info flex-1 py-medium lg:py-big text-center order-1 lg:order-2">
-		<div class="text-gray-400 flex justify-between">
-			<span>PROSSIMO EVENTO</span>
-			<span>2026</span>
-		</div>
-		<div class="px-medium py-bigger">
-			<h2 class="text-big pb-medium lg:pb-30">HARMONIA</h2>
-			<time class="text-h2-medium">COMING SOON</time>
-
-
-			<div class="event-cd-wrapper pt-80 pb-128 relative" :class="showCountdown ? 'show-cd' : ''">
-      <div class="event-status pb-30 absolute inset-0 flex items-center justify-center text-big" x-show="!showCountdown" x-text="countdownStatus" style="display: none;">IN ARRIVO</div>
-				<div class="cd-label pb-30 text-gray-400" x-text="countdownLabel">DATA IN ANNUNCIO</div>
-				<div class="event-cd">
-					<div class="cd-display flex items-start justify-center">
-						<div class="cd-item">
-							<div class="number days text-big" x-text="countdown.days">31</div>
-							<div class="label">Days</div>
-						</div>
-						<div class="cd-separator text-big">:</div>
-						<div class="cd-item">
-							<div class="number hours text-big" x-text="countdown.hours">0</div>
-							<div class="label">Hours</div>
-						</div>
-						<div class="cd-separator text-big">:</div>
-						<div class="cd-item">
-							<div class="number minutes text-big" x-text="countdown.minutes">54</div>
-							<div class="label">Minutes</div>
-						</div>
-						<div class="cd-separator text-big">:</div>
-						<div class="cd-item">
-							<div class="number seconds text-big" x-text="countdown.seconds">10</div>
-							<div class="label">Seconds</div>
-						</div>
-					</div>
-				</div>
-			</div>
-						<div class="cd-buttons flex flex-col gap-medium w-full lg:flex-row justify-center min-h-44">
-      													<a href="https://www.instagram.com/harmonia.ita/" class="button tickets-btn" target="_blank">SEGUI @HARMONIA.ITA</a>
-				      			</div>
-		</div>
-		<div class="text-gray-400 flex justify-between">
-			<span>HARMONIA</span>
-			<span>CLUB TOGETHER</span>
-		</div>
-	</div>
-</div>
+<section class="event-cd-block container" x-data="{
+  countdown:{days:'0',hours:'0',minutes:'0',seconds:'0'},
+  showCountdown:false,
+  status:'IN ARRIVO',
+  eventDate:(()=&gt;{const s='';if(!s)return 0;const d=new Date(s);return isNaN(d.getTime())?0:d.getTime();})(),
+  tick(){const now=Date.now();if(!this.eventDate){this.showCountdown=false;this.status='IN ARRIVO';return;}const dist=this.eventDate-now;if(dist&lt;0){this.showCountdown=false;this.status='LIVE';return;}this.showCountdown=true;this.countdown.days=Math.floor(dist/864e5);this.countdown.hours=Math.floor(dist%864e5/36e5);this.countdown.minutes=Math.floor(dist%36e5/6e4);this.countdown.seconds=Math.floor(dist%6e4/1e3);},
+  init(){this.tick();setInterval(()=&gt;this.tick(),1000);}
+}" x-init="init()">
+  <div class="ev-media">
+    <img src="/harmonia/foto/crowd-2.jpg" alt="Harmonia – prossimo evento" class="w-full h-full object-cover">
+  </div>
+  <div class="ev-info">
+    <p class="ev-eyebrow text-secondary">PROSSIMO EVENTO</p>
+    <h2 class="ev-title">HARMONIA</h2>
+    <div class="ev-countdown" x-show="showCountdown" x-cloak>
+      <div class="ev-cd-item"><span class="ev-num" x-text="countdown.days">0</span><span class="ev-unit">Giorni</span></div>
+      <div class="ev-cd-item"><span class="ev-num" x-text="countdown.hours">0</span><span class="ev-unit">Ore</span></div>
+      <div class="ev-cd-item"><span class="ev-num" x-text="countdown.minutes">0</span><span class="ev-unit">Min</span></div>
+      <div class="ev-cd-item"><span class="ev-num" x-text="countdown.seconds">0</span><span class="ev-unit">Sec</span></div>
+    </div>
+    <p class="ev-status" x-show="!showCountdown" x-text="status">IN ARRIVO</p>
+    <a href="https://www.instagram.com/harmonia.ita/" class="ev-cta" target="_blank" rel="noopener">SEGUI @HARMONIA.ITA <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</section>
 
     </div>
 
@@ -480,121 +384,17 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 
 
 
-<div class="event-cd-block container flex flex-col lg:flex-row gap-big lg:gap-0 bg-white-loco" x-data="{
-       countdown: {
-         days: '-',
-         hours: '-',
-         minutes: '-',
-         seconds: '-'
-       },
-       isPreregistrationActive: false,
-       showCountdown: true,
-       countdownStatus: 'IN ARRIVO',
-       countdownLabel: 'DATA IN ANNUNCIO',
-       // Safari 15 fix: Use ISO 8601 format (Y-m-dTH:i:sZ) for better date parsing compatibility
-       eventDate: (() =&gt; {
-                  const dateStr = '';
-         if (!dateStr || dateStr === 'Z') return 0;
-         const date = new Date(dateStr);
-         return !isNaN(date.getTime()) ? date.getTime() : 0;
-                })(),
-       eventEndDate: (() =&gt; {
-                  return 0;
-                })(),
-       preregistrationEndDate: (() =&gt; {
-                  return 0;
-                })(),
-       interval: null,
-
-       updateCountdown() {
-         const now = new Date().getTime();
-         // Safari 15 fix: Check if dates are valid before calculating
-         if (!this.eventDate || isNaN(this.eventDate)) {
-           this.showCountdown = false;
-           this.countdownStatus = 'IN ARRIVO';
-           return;
-         }
-         const eventDistance = this.eventDate - now;
-
-         if (eventDistance &lt; 0) {
-           this.showCountdown = false;
-           const endedDistance = this.eventEndDate - now;
-           if (endedDistance &lt; 0) {
-             this.countdownStatus = 'ENDED';
-           } else {
-             this.countdownStatus = 'LIVE';
-           }
-           return;
-         }
-
-         // Always show event start countdown, never pre-registration countdown
-         this.countdownLabel = 'DATA IN ANNUNCIO';
-         this.updateCountdownDisplay(eventDistance);
-       },
-
-       updateCountdownDisplay(distance) {
-         // Safari 15 fix: Ensure distance is a valid number
-         if (isNaN(distance) || distance &lt; 0) {
-           this.countdown.days = '-';
-           this.countdown.hours = '-';
-           this.countdown.minutes = '-';
-           this.countdown.seconds = '-';
-           return;
-         }
-         this.countdown.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-         this.countdown.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-         this.countdown.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-         this.countdown.seconds = Math.floor((distance % (1000 * 60)) / 1000);
-       },
-
-       updateRegistrationState() {
-         const now = new Date().getTime();
-         this.isPreregistrationActive = now &lt; this.preregistrationEndDate;
-       },
-
-       updateAll() {
-         this.updateCountdown();
-         this.updateRegistrationState();
-       },
-
-       init() {
-         this.updateAll();
-         this.interval = setInterval(() =&gt; this.updateAll(), 1000);
-       }
-     }" x-init="init()">
-	<div class="cd-cover order-2 lg:order-1 relative">
-    <div class="lg:py-big lg:absolute lg:inset-0">
-      <div class=" media-wrapper mb-big lg-mb-0 h-full aspect-[4/5]">
-                        
-                
-    
-    
-    <img src="/harmonia/foto/people-3.jpg" alt="Harmonia" class="w-full h-full object-cover">
-  
-      </div>
-		</div>
-	</div>
-	<div class="cd-info flex-1 py-medium lg:py-big text-center order-1 lg:order-2">
-		<div class="text-gray-400 flex justify-between">
-			<span>PROSSIMO EVENTO</span>
-			<span>2026</span>
-		</div>
-		<div class="px-medium py-bigger">
-			<h2 class="text-big pb-medium lg:pb-30">PORTA HARMONIA NEL TUO CLUB</h2>
-			<time class="text-h2-medium">FORMAT SU MISURA</time>
-
-
-			<div class="py-80"></div>
-						<div class="cd-buttons flex flex-col gap-medium w-full lg:flex-row justify-center min-h-44">
-      													<a href="/partner" class="button tickets-btn" :class="{ 'disabled': isPreregistrationActive }" target="_blank">SCOPRI IL FORMAT</a>
-				      			</div>
-		</div>
-		<div class="text-gray-400 flex justify-between">
-			<span>HARMONIA</span>
-			<span>CLUB TOGETHER</span>
-		</div>
-	</div>
-</div>
+<section class="event-cd-block container bg-white">
+  <div class="ev-info ev-info--left">
+    <p class="ev-eyebrow text-secondary">IL FORMAT</p>
+    <h2 class="ev-title">Porta Harmonia<br>nel tuo club</h2>
+    <p class="ev-lead">Un format su misura per il tuo locale: la stessa energia di Harmonia, costruita attorno al tuo spazio e al tuo pubblico.</p>
+    <a href="/partner" class="ev-cta">SCOPRI IL FORMAT <span aria-hidden="true">&#8599;</span></a>
+  </div>
+  <div class="ev-media">
+    <img src="/harmonia/foto/people-3.jpg" alt="Porta Harmonia nel tuo club" class="w-full h-full object-cover">
+  </div>
+</section>
 
     </div>
 

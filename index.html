@@ -690,17 +690,26 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 </style>
 
 <style id="harmonia-pillcss">
-.pill-carousel .pill-card{height:90px;gap:var(--spacing-medium)}
+.pill-carousel .pill-card{height:96px}
 .pill-carousel.has-autoplay .embla__viewport{padding-left:var(--spacing-medium);padding-right:var(--spacing-medium)}
-.pill-carousel .pill-img-wrapper{border-radius:var(--spacing-small);overflow:hidden;aspect-ratio:1/1;width:70px;height:70px}
+.pill-carousel .pill-img-wrapper{overflow:hidden;aspect-ratio:1/1;width:96px;height:96px}
 .pill-carousel .pill-card:hover{transform:translateY(-2px);transition:transform .2s ease-in-out}
 .pill-carousel .embla__slide{width:353px;border-radius:var(--spacing-small);overflow:hidden;margin-right:var(--slide-gap);--slide-gap:var(--spacing-medium);min-width:0}
-.pill-carousel .embla__slide>*{user-select:none;-webkit-user-select:none}
-.pill-carousel.no-autoplay .embla__slide:first-child{margin-left:var(--slide-gap)}
 @media (min-width:1024px){.pill-carousel .embla__slide{--slide-gap:var(--spacing-big);width:calc((100% - 5 * var(--slide-gap)) / 4);min-width:353px}}
 @media (min-width:1440px){.pill-carousel .embla__slide{max-width:460px}}
 </style>
-</head>
+<style id="harmonia-ww2">
+.worldwide2 .ww2-title{margin-bottom:clamp(20px,2.5vw,36px);text-transform:uppercase}
+.worldwide2 .ww2-grid{display:grid;grid-template-columns:1fr;gap:var(--spacing-big)}
+@media (min-width:640px){.worldwide2 .ww2-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1024px){.worldwide2 .ww2-grid{grid-template-columns:repeat(4,1fr)}}
+.worldwide2 .event-card2{display:block}
+.worldwide2 .event-image-wrapper img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.worldwide2 .event-card2:hover .event-image-wrapper img{transform:scale(1.04)}
+.worldwide2 .event-content{align-items:baseline;gap:12px}
+.worldwide2 .event-title2{font-size:clamp(15px,1.1vw,17px);font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+.worldwide2 .event-date2{font-size:clamp(13px,1vw,15px);color:var(--color-gray-400);white-space:nowrap}
+</style></head>
 <body x-data="cursor" style="zoom: 1;">
 
     
@@ -853,9 +862,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       
 
 
-<h2 class="text-block bg-white text-h2-medium" style="
-    --pt: var(--spacing-big); --px: var(--spacing-big); --pb: var(--spacing-big); --pt-d: var(--spacing-bigger); --px-d: var(--spacing-big); --pb-d: var(--spacing-big); --align-m: left; --align-d: right;">  Club Together — non solo un party, un ecosistema.
-</h2>
+
     </div>
 
           
@@ -1094,12 +1101,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
     <div class="embla__viewport">
       <div class="embla__container flex py-medium lg:py-big">
       <div class="embla__slide flex-shrink-0 w-[80vw] shadow">
-        <div class="pill-card bg-white overflow-hidden h-full p-medium relative">
-          <div class="flex gap-medium h-full">
+        <div class="pill-card bg-white overflow-hidden h-full relative">
+          <div class="flex h-full items-stretch">
             <div class="pill-img-wrapper shrink-0 grow-0">
               <img src="/harmonia/foto/people-1.jpg" alt="HARMONIA CAPRI" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="flex flex-col justify-between max-w-[208px]">
+            <div class="flex flex-col justify-between p-medium min-w-0 flex-1">
               <div>
                 <h3>HARMONIA CAPRI</h3>
                 <p class="text-gray-400">LINE-UP</p>
@@ -1111,12 +1118,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         <a href="/eventi" class="absolute inset-0"></a>
       </div>
       <div class="embla__slide flex-shrink-0 w-[80vw] shadow">
-        <div class="pill-card bg-white overflow-hidden h-full p-medium relative">
-          <div class="flex gap-medium h-full">
+        <div class="pill-card bg-white overflow-hidden h-full relative">
+          <div class="flex h-full items-stretch">
             <div class="pill-img-wrapper shrink-0 grow-0">
               <img src="/harmonia/foto/people-2.jpg" alt="HARMONIA FONDI" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="flex flex-col justify-between max-w-[208px]">
+            <div class="flex flex-col justify-between p-medium min-w-0 flex-1">
               <div>
                 <h3>HARMONIA FONDI</h3>
                 <p class="text-gray-400">LINE-UP</p>
@@ -1128,12 +1135,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         <a href="/eventi" class="absolute inset-0"></a>
       </div>
       <div class="embla__slide flex-shrink-0 w-[80vw] shadow">
-        <div class="pill-card bg-white overflow-hidden h-full p-medium relative">
-          <div class="flex gap-medium h-full">
+        <div class="pill-card bg-white overflow-hidden h-full relative">
+          <div class="flex h-full items-stretch">
             <div class="pill-img-wrapper shrink-0 grow-0">
               <img src="/harmonia/foto/people-5.jpg" alt="HARMONIA ISCHIA" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="flex flex-col justify-between max-w-[208px]">
+            <div class="flex flex-col justify-between p-medium min-w-0 flex-1">
               <div>
                 <h3>HARMONIA ISCHIA</h3>
                 <p class="text-gray-400">LINE-UP</p>
@@ -1145,12 +1152,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         <a href="/eventi" class="absolute inset-0"></a>
       </div>
       <div class="embla__slide flex-shrink-0 w-[80vw] shadow">
-        <div class="pill-card bg-white overflow-hidden h-full p-medium relative">
-          <div class="flex gap-medium h-full">
+        <div class="pill-card bg-white overflow-hidden h-full relative">
+          <div class="flex h-full items-stretch">
             <div class="pill-img-wrapper shrink-0 grow-0">
               <img src="/harmonia/foto/people-3.jpg" alt="HARMONIA ISCHIA" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="flex flex-col justify-between max-w-[208px]">
+            <div class="flex flex-col justify-between p-medium min-w-0 flex-1">
               <div>
                 <h3>HARMONIA ISCHIA</h3>
                 <p class="text-gray-400">LINE-UP</p>
@@ -1162,12 +1169,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         <a href="/eventi" class="absolute inset-0"></a>
       </div>
       <div class="embla__slide flex-shrink-0 w-[80vw] shadow">
-        <div class="pill-card bg-white overflow-hidden h-full p-medium relative">
-          <div class="flex gap-medium h-full">
+        <div class="pill-card bg-white overflow-hidden h-full relative">
+          <div class="flex h-full items-stretch">
             <div class="pill-img-wrapper shrink-0 grow-0">
               <img src="/harmonia/foto/people-7.jpg" alt="HARMONIA MYKONOS" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="flex flex-col justify-between max-w-[208px]">
+            <div class="flex flex-col justify-between p-medium min-w-0 flex-1">
               <div>
                 <h3>HARMONIA MYKONOS</h3>
                 <p class="text-gray-400">LINE-UP</p>
@@ -1179,12 +1186,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         <a href="/eventi" class="absolute inset-0"></a>
       </div>
       <div class="embla__slide flex-shrink-0 w-[80vw] shadow">
-        <div class="pill-card bg-white overflow-hidden h-full p-medium relative">
-          <div class="flex gap-medium h-full">
+        <div class="pill-card bg-white overflow-hidden h-full relative">
+          <div class="flex h-full items-stretch">
             <div class="pill-img-wrapper shrink-0 grow-0">
               <img src="/harmonia/foto/people-8.jpg" alt="HARMONIA PORTO CERVO" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="flex flex-col justify-between max-w-[208px]">
+            <div class="flex flex-col justify-between p-medium min-w-0 flex-1">
               <div>
                 <h3>HARMONIA PORTO CERVO</h3>
                 <p class="text-gray-400">LINE-UP</p>
@@ -1196,12 +1203,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         <a href="/eventi" class="absolute inset-0"></a>
       </div>
       <div class="embla__slide flex-shrink-0 w-[80vw] shadow">
-        <div class="pill-card bg-white overflow-hidden h-full p-medium relative">
-          <div class="flex gap-medium h-full">
+        <div class="pill-card bg-white overflow-hidden h-full relative">
+          <div class="flex h-full items-stretch">
             <div class="pill-img-wrapper shrink-0 grow-0">
               <img src="/harmonia/foto/crowd-2.jpg" alt="HARMONIA SORRENTO COAST" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="flex flex-col justify-between max-w-[208px]">
+            <div class="flex flex-col justify-between p-medium min-w-0 flex-1">
               <div>
                 <h3>HARMONIA SORRENTO COAST</h3>
                 <p class="text-gray-400">LINE-UP</p>
@@ -1271,53 +1278,62 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
     </div>
   </div>
 </section>
-<section class="bg-white-loco worldwide">
+<section class="bg-white-loco worldwide2">
   <div class="container py-big">
-    <div class="ww-head">
-      <span class="text-secondary">HARMONIA</span>
-      <h2 class="ww-title">Worldwide</h2>
-    </div>
-    <div class="ww-grid">
-      <a class="ww-card" href="/eventi">
-        <img src="/harmonia/foto/people-1.jpg" alt="Harmonia Capri">
-        <div class="ww-ov">
-          <span class="ww-place">Capri</span>
-          <span class="ww-date">27 Giugno 2026</span>
+    <h2 class="text-h2-medium ww2-title">Worldwide</h2>
+    <div class="ww2-grid">
+      <a class="event-card2" href="/eventi">
+        <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
+          <img src="/harmonia/foto/people-1.jpg" alt="Harmonia Capri" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="event-content flex justify-between">
+          <h3 class="event-title2">Capri</h3>
+          <div class="event-date2">27 Giugno 2026</div>
         </div>
       </a>
-      <a class="ww-card" href="/eventi">
-        <img src="/harmonia/foto/people-2.jpg" alt="Harmonia Fondi &middot; Gaeta">
-        <div class="ww-ov">
-          <span class="ww-place">Fondi &middot; Gaeta</span>
-          <span class="ww-date">10 Luglio 2026</span>
+      <a class="event-card2" href="/eventi">
+        <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
+          <img src="/harmonia/foto/people-2.jpg" alt="Harmonia Fondi &middot; Gaeta" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="event-content flex justify-between">
+          <h3 class="event-title2">Fondi &middot; Gaeta</h3>
+          <div class="event-date2">10 Luglio 2026</div>
         </div>
       </a>
-      <a class="ww-card" href="/eventi">
-        <img src="/harmonia/foto/people-5.jpg" alt="Harmonia Ischia">
-        <div class="ww-ov">
-          <span class="ww-place">Ischia</span>
-          <span class="ww-date">18 Luglio &middot; 1 Agosto</span>
+      <a class="event-card2" href="/eventi">
+        <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
+          <img src="/harmonia/foto/people-5.jpg" alt="Harmonia Ischia" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="event-content flex justify-between">
+          <h3 class="event-title2">Ischia</h3>
+          <div class="event-date2">18 Lug &middot; 1 Ago</div>
         </div>
       </a>
-      <a class="ww-card" href="/eventi">
-        <img src="/harmonia/foto/people-7.jpg" alt="Harmonia Mykonos">
-        <div class="ww-ov">
-          <span class="ww-place">Mykonos</span>
-          <span class="ww-date">7 Agosto 2026</span>
+      <a class="event-card2" href="/eventi">
+        <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
+          <img src="/harmonia/foto/people-7.jpg" alt="Harmonia Mykonos" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="event-content flex justify-between">
+          <h3 class="event-title2">Mykonos</h3>
+          <div class="event-date2">7 Agosto 2026</div>
         </div>
       </a>
-      <a class="ww-card" href="/eventi">
-        <img src="/harmonia/foto/people-8.jpg" alt="Harmonia Porto Cervo">
-        <div class="ww-ov">
-          <span class="ww-place">Porto Cervo</span>
-          <span class="ww-date">17 Agosto 2026</span>
+      <a class="event-card2" href="/eventi">
+        <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
+          <img src="/harmonia/foto/people-8.jpg" alt="Harmonia Porto Cervo" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="event-content flex justify-between">
+          <h3 class="event-title2">Porto Cervo</h3>
+          <div class="event-date2">17 Agosto 2026</div>
         </div>
       </a>
-      <a class="ww-card" href="/eventi">
-        <img src="/harmonia/foto/crowd-2.jpg" alt="Harmonia Sorrento Coast">
-        <div class="ww-ov">
-          <span class="ww-place">Sorrento Coast</span>
-          <span class="ww-date">29 Agosto 2026</span>
+      <a class="event-card2" href="/eventi">
+        <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
+          <img src="/harmonia/foto/crowd-2.jpg" alt="Harmonia Sorrento Coast" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="event-content flex justify-between">
+          <h3 class="event-title2">Sorrento Coast</h3>
+          <div class="event-date2">29 Agosto 2026</div>
         </div>
       </a>
     </div>
@@ -1343,13 +1359,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
     </div>
   </div>
 </section>
-<section class="hh-banner" style="--hh-img:url('/harmonia/foto/crowd-1.jpg')">
-  <div class="container hh-banner-inner">
-    <p class="hh-banner-kicker">HARMONIA</p>
-    <h2 class="hh-banner-title">Non esistono<br>due serate uguali</h2>
-    <a class="hh-banner-cta" href="/eventi">SCOPRI LE DATE <span aria-hidden="true">&#8599;</span></a>
-  </div>
-</section>
+
 </main>
 
       

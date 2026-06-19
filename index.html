@@ -553,9 +553,8 @@
 .hh-logo img{height:30px;width:auto;display:block;transition:opacity .2s}
 .hh-logo:hover img{opacity:.78}
 .hh-nav{display:flex;align-items:center;gap:clamp(22px,2.5vw,44px)}
-.hh-nav a{position:relative;display:inline-block;font-size:13px;letter-spacing:.16em;line-height:1;color:#0a0a0a;padding:10px 0;white-space:nowrap;transition:color .2s}
-.hh-nav a::after{content:"";position:absolute;left:0;bottom:2px;width:0;height:1.5px;background:#0a0a0a;transition:width .3s ease}
-.hh-nav a:hover::after{width:100%}
+.hh-nav .btn-effect-scrollup{display:flex;flex-direction:column;line-height:1.3;max-height:1lh;overflow:hidden;cursor:pointer}
+.hh-nav .btn-effect{font-size:13px;letter-spacing:.16em;line-height:1.3;color:#0a0a0a;white-space:nowrap;text-decoration:none}
 .hh-burger{display:none;align-items:center;gap:9px;font-size:13px;letter-spacing:.16em;color:#0a0a0a;background:none;border:0;padding:8px 0;cursor:pointer}
 .hh-burger svg{display:block}
 .hh-burger .hh-bar2{transition:transform .3s ease}
@@ -747,11 +746,11 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       <img src="/harmonia/brand/logo-orizzontale.png" alt="Harmonia">
     </a>
     <nav class="hh-nav" aria-label="Navigazione principale">
-      <a href="/eventi">EVENTI</a>
-      <a href="/artisti">ARTISTI</a>
-      <a href="/records">RECORDS</a>
-      <a href="/galleria">GALLERIA</a>
-      <a href="/partner">PARTNER</a>
+      <span class="btn-effect-scrollup"><a class="btn-effect" href="/eventi">EVENTI</a><a class="btn-effect" href="/eventi">EVENTI</a></span>
+      <span class="btn-effect-scrollup"><a class="btn-effect" href="/artisti">ARTISTI</a><a class="btn-effect" href="/artisti">ARTISTI</a></span>
+      <span class="btn-effect-scrollup"><a class="btn-effect" href="/records">RECORDS</a><a class="btn-effect" href="/records">RECORDS</a></span>
+      <span class="btn-effect-scrollup"><a class="btn-effect" href="/galleria">GALLERIA</a><a class="btn-effect" href="/galleria">GALLERIA</a></span>
+      <span class="btn-effect-scrollup"><a class="btn-effect" href="/partner">PARTNER</a><a class="btn-effect" href="/partner">PARTNER</a></span>
     </nav>
     <button type="button" class="hh-burger" @click="isOpen=!isOpen" :aria-expanded="isOpen" aria-controls="harmonia-mobile-nav" aria-label="Apri menu">
       <span x-text="isOpen ? 'CHIUDI' : 'MENU'">MENU</span>

@@ -660,6 +660,36 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .hh-banner-cta{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;color:#fff;border:1px solid rgba(255,255,255,.45);padding:15px 28px;transition:background .25s ease,border-color .25s ease}
 .hh-banner-cta:hover{background:var(--color-red);border-color:var(--color-red)}
 </style>
+
+<style id="harmonia-cl">
+/* --- eventi in evidenza (pill-card) --- */
+.pills .pills-head{margin-bottom:clamp(18px,2vw,28px)}
+.pills .pills-head .text-secondary{letter-spacing:.24em}
+.pills .pills-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,1fr);gap:clamp(12px,1.4vw,18px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+@media(min-width:1024px){.pills .pills-row{grid-template-columns:repeat(4,1fr);grid-auto-flow:row;overflow:visible}}
+.pills .pill{scroll-snap-align:start;display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--color-gray-200);padding:14px;transition:border-color .2s ease}
+.pills .pill:hover{border-color:var(--color-red)}
+.pills .pill-img{flex:0 0 auto;width:84px;height:84px;overflow:hidden;background:#0c0c0c}
+.pills .pill-img img{width:100%;height:100%;object-fit:cover;display:block}
+.pills .pill-txt{display:flex;flex-direction:column;gap:5px;min-width:0}
+.pills .pill-title{font-size:17px;font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+.pills .pill-meta{font-size:12.5px;color:var(--color-gray-400);letter-spacing:.04em}
+.pills .pill-cta{font-size:12px;letter-spacing:.16em;color:var(--color-red);margin-top:4px}
+
+/* --- worldwide (card localita) --- */
+.worldwide .ww-head{margin-bottom:clamp(30px,4vw,56px)}
+.worldwide .ww-head .text-secondary{letter-spacing:.24em;display:block;margin-bottom:14px}
+.worldwide .ww-title{font-size:clamp(30px,3.6vw,56px);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.005em;margin:0}
+.worldwide .ww-grid{display:grid;grid-template-columns:1fr;gap:clamp(14px,1.4vw,20px)}
+@media(min-width:640px){.worldwide .ww-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.worldwide .ww-grid{grid-template-columns:1fr 1fr 1fr}}
+.worldwide .ww-card{position:relative;display:block;overflow:hidden;aspect-ratio:3/4;background:#0c0c0c}
+.worldwide .ww-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.worldwide .ww-card:hover img{transform:scale(1.06)}
+.worldwide .ww-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,2vw,30px);background:linear-gradient(180deg,rgba(0,0,0,0) 42%,rgba(0,0,0,.66) 100%);color:#fff}
+.worldwide .ww-place{font-size:clamp(24px,2.2vw,34px);font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+.worldwide .ww-date{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-top:10px}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -1037,6 +1067,45 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 																																				
 
 
+<section class="bg-white pills">
+  <div class="container py-bigger">
+    <div class="pills-head"><span class="text-secondary">IN EVIDENZA</span></div>
+    <div class="pills-row">
+      <a class="pill" href="/eventi">
+        <span class="pill-img"><img src="/harmonia/foto/people-1.jpg" alt="Harmonia Capri"></span>
+        <span class="pill-txt">
+          <span class="pill-title">Harmonia Capri</span>
+          <span class="pill-meta">27.06.2026 &middot; Capri</span>
+          <span class="pill-cta">LINE-UP &#8599;</span>
+        </span>
+      </a>
+      <a class="pill" href="/eventi">
+        <span class="pill-img"><img src="/harmonia/foto/people-2.jpg" alt="Harmonia Fondi"></span>
+        <span class="pill-txt">
+          <span class="pill-title">Harmonia Fondi</span>
+          <span class="pill-meta">10.07.2026 &middot; Gaeta</span>
+          <span class="pill-cta">LINE-UP &#8599;</span>
+        </span>
+      </a>
+      <a class="pill" href="/eventi">
+        <span class="pill-img"><img src="/harmonia/foto/people-5.jpg" alt="Harmonia Ischia"></span>
+        <span class="pill-txt">
+          <span class="pill-title">Harmonia Ischia</span>
+          <span class="pill-meta">18.07.2026 &middot; Ischia</span>
+          <span class="pill-cta">LINE-UP &#8599;</span>
+        </span>
+      </a>
+      <a class="pill" href="/eventi">
+        <span class="pill-img"><img src="/harmonia/foto/people-7.jpg" alt="Harmonia Mykonos"></span>
+        <span class="pill-txt">
+          <span class="pill-title">Harmonia Mykonos</span>
+          <span class="pill-meta">07.08.2026 &middot; Mykonos</span>
+          <span class="pill-cta">LINE-UP &#8599;</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
 <section class="bg-white agenda">
   <div class="container py-huge">
     <div class="ag-head">
@@ -1092,6 +1161,58 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
     </div>
   </div>
 </section>
+<section class="bg-white-loco worldwide">
+  <div class="container py-huge">
+    <div class="ww-head">
+      <span class="text-secondary">HARMONIA</span>
+      <h2 class="ww-title">Worldwide</h2>
+    </div>
+    <div class="ww-grid">
+      <a class="ww-card" href="/eventi">
+        <img src="/harmonia/foto/people-1.jpg" alt="Harmonia Capri">
+        <div class="ww-ov">
+          <span class="ww-place">Capri</span>
+          <span class="ww-date">27 Giugno 2026</span>
+        </div>
+      </a>
+      <a class="ww-card" href="/eventi">
+        <img src="/harmonia/foto/people-2.jpg" alt="Harmonia Fondi &middot; Gaeta">
+        <div class="ww-ov">
+          <span class="ww-place">Fondi &middot; Gaeta</span>
+          <span class="ww-date">10 Luglio 2026</span>
+        </div>
+      </a>
+      <a class="ww-card" href="/eventi">
+        <img src="/harmonia/foto/people-5.jpg" alt="Harmonia Ischia">
+        <div class="ww-ov">
+          <span class="ww-place">Ischia</span>
+          <span class="ww-date">18 Luglio &middot; 1 Agosto</span>
+        </div>
+      </a>
+      <a class="ww-card" href="/eventi">
+        <img src="/harmonia/foto/people-7.jpg" alt="Harmonia Mykonos">
+        <div class="ww-ov">
+          <span class="ww-place">Mykonos</span>
+          <span class="ww-date">7 Agosto 2026</span>
+        </div>
+      </a>
+      <a class="ww-card" href="/eventi">
+        <img src="/harmonia/foto/people-8.jpg" alt="Harmonia Porto Cervo">
+        <div class="ww-ov">
+          <span class="ww-place">Porto Cervo</span>
+          <span class="ww-date">17 Agosto 2026</span>
+        </div>
+      </a>
+      <a class="ww-card" href="/eventi">
+        <img src="/harmonia/foto/crowd-2.jpg" alt="Harmonia Sorrento Coast">
+        <div class="ww-ov">
+          <span class="ww-place">Sorrento Coast</span>
+          <span class="ww-date">29 Agosto 2026</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 <section class="bg-white-loco manifesto">
   <div class="container py-huge">
     <div class="mf-grid">
@@ -1117,48 +1238,6 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
     <p class="hh-banner-kicker">HARMONIA</p>
     <h2 class="hh-banner-title">Non esistono<br>due serate uguali</h2>
     <a class="hh-banner-cta" href="/eventi">SCOPRI LE DATE <span aria-hidden="true">&#8599;</span></a>
-  </div>
-</section>
-<section class="bg-white home-cards">
-  <div class="container py-huge">
-    <div class="hc-head">
-      <span class="text-secondary">ESPLORA</span>
-      <h2 class="hc-title">Entra nell'ecosistema</h2>
-    </div>
-    <div class="hc-grid">
-      <a href="/eventi" class="hc-card">
-        <img src="/harmonia/foto/crowd-1.jpg" alt="Eventi Harmonia">
-        <div class="hc-overlay">
-          <span class="hc-label">Eventi</span>
-          <span class="hc-desc">Le prossime date</span>
-        </div>
-        <span class="hc-arrow" aria-hidden="true">&#8599;</span>
-      </a>
-      <a href="/artisti" class="hc-card">
-        <img src="/harmonia/foto/mason-collective.jpg" alt="Artisti Harmonia">
-        <div class="hc-overlay">
-          <span class="hc-label">Artisti</span>
-          <span class="hc-desc">Chi sale in console</span>
-        </div>
-        <span class="hc-arrow" aria-hidden="true">&#8599;</span>
-      </a>
-      <a href="/galleria" class="hc-card">
-        <img src="/harmonia/foto/people-6.jpg" alt="Galleria Harmonia">
-        <div class="hc-overlay">
-          <span class="hc-label">Galleria</span>
-          <span class="hc-desc">Dentro le nostre notti</span>
-        </div>
-        <span class="hc-arrow" aria-hidden="true">&#8599;</span>
-      </a>
-      <a href="/partner" class="hc-card">
-        <img src="/harmonia/foto/people-4.jpg" alt="Partner Harmonia">
-        <div class="hc-overlay">
-          <span class="hc-label">Partner</span>
-          <span class="hc-desc">Porta Harmonia da te</span>
-        </div>
-        <span class="hc-arrow" aria-hidden="true">&#8599;</span>
-      </a>
-    </div>
   </div>
 </section>
 </main>

@@ -602,6 +602,34 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .text-h2-medium{letter-spacing:.01em}
 .text-h3{letter-spacing:.015em}
 </style>
+<style id="harmonia-home">
+/* manifesto editoriale a due colonne */
+.manifesto .container{max-width:none}
+.manifesto .mf-grid{display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,64px)}
+@media(min-width:1024px){.manifesto .mf-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(48px,7vw,120px)}.manifesto .mf-head{position:sticky;top:120px;align-self:start}}
+.manifesto .mf-eyebrow{letter-spacing:.24em;margin:0 0 18px}
+.manifesto .mf-title{font-size:clamp(44px,6vw,92px);font-weight:800;line-height:.92;text-transform:uppercase;letter-spacing:.005em;margin:0}
+.manifesto .mf-mark{display:flex;align-items:center;gap:16px;margin-top:clamp(28px,3vw,44px)}
+.manifesto .mf-mark span{max-width:18ch;line-height:1.3}
+.manifesto .mf-body{display:flex;flex-direction:column;gap:clamp(18px,1.5vw,26px);max-width:60ch}
+.manifesto .mf-body p{margin:0;font-size:clamp(19px,1.45vw,25px);line-height:1.52;letter-spacing:.005em;font-weight:500;color:#16161a;text-transform:none}
+.manifesto .mf-body p:first-child{font-size:clamp(22px,1.8vw,30px);line-height:1.42;color:#000}
+
+/* card esplora: immagine in primo piano, etichetta sovrapposta */
+.home-cards .hc-head{margin-bottom:clamp(30px,4vw,56px)}
+.home-cards .hc-head .text-secondary{letter-spacing:.24em;display:block;margin-bottom:14px}
+.home-cards .hc-title{font-size:clamp(30px,3.6vw,56px);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.005em;margin:0}
+.home-cards .hc-grid{display:grid;grid-template-columns:1fr;gap:clamp(14px,1.4vw,20px)}
+@media(min-width:768px){.home-cards .hc-grid{grid-template-columns:1fr 1fr}}
+.home-cards .hc-card{position:relative;display:block;overflow:hidden;aspect-ratio:3/2;background:#0c0c0c}
+.home-cards .hc-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.home-cards .hc-card:hover img{transform:scale(1.06)}
+.home-cards .hc-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px,2.2vw,38px);background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(0,0,0,.6) 100%);color:#fff}
+.home-cards .hc-label{font-size:clamp(26px,2.6vw,40px);font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+.home-cards .hc-desc{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-top:12px}
+.home-cards .hc-arrow{position:absolute;top:clamp(20px,2vw,32px);right:clamp(20px,2vw,32px);font-size:20px;line-height:1;color:#fff;opacity:.8;transition:transform .3s ease,opacity .3s ease}
+.home-cards .hc-card:hover .hc-arrow{transform:translate(5px,-5px);opacity:1}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -756,7 +784,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 
 
 <h2 class="text-block bg-white text-h2-medium" style="
-    --pt: var(--spacing-big); --px: var(--spacing-big); --pb: var(--spacing-big); --pt-d: var(--spacing-bigger); --px-d: var(--spacing-big); --pb-d: var(--spacing-big); --align-m: left; --align-d: right;">  HARMONIA – CLUB TOGETHER
+    --pt: var(--spacing-big); --px: var(--spacing-big); --pb: var(--spacing-big); --pt-d: var(--spacing-bigger); --px-d: var(--spacing-big); --pb-d: var(--spacing-big); --align-m: left; --align-d: right;">  Club Together — non solo un party, un ecosistema.
 </h2>
     </div>
 
@@ -980,35 +1008,64 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 
 
 <section class="bg-white-loco manifesto">
-  <div class="container py-huge space-y-big lg:max-w-4xl">
-    <p class="text-secondary">MANIFESTO</p>
-    <h2 class="text-h2-medium">HARMONIA – CLUB TOGETHER</h2>
-    <p class="text-big leading-relaxed normal-case">Ispirato alla Harmonia Axyridis, Harmonia è un party che celebra l'eclettismo e la bellezza dell'incontro. Come i suoi puntini — ognuno unico, eppure parte dello stesso disegno — ogni persona che entra nel club è parte di un mosaico che dà colore al nostro universo.</p>
-<p class="text-big leading-relaxed normal-case">Non esistono due serate uguali: Harmonia è un habitat libero e fluido, dove le differenze si fondono in un'unica vibrazione condivisa. Qui il clubbing torna alla sua essenza più pura: un'esperienza collettiva, fisica e sensoriale. Zero pose, zero filtri. Solo musica, sudore e connessione vera.</p>
-<p class="text-big leading-relaxed normal-case">Harmonia è l'energia che scorre tra corpi che ballano insieme; è un ritmo che abbatte le barriere. È la casa di chi non cerca etichette, ma emozioni vere.</p>
-<p class="text-big leading-relaxed normal-case">Non è solo un party. È un ecosistema. Colorato, mutante, vivo.</p>
-    <div class="flex items-center gap-big pt-big">
-      <img src="/harmonia/brand/logo-simbolo.png" alt="" class="w-100 h-auto" style="width:90px">
-      <p class="text-secondary">Non solo un party. Un ecosistema.</p>
+  <div class="container py-huge">
+    <div class="mf-grid">
+      <div class="mf-head">
+        <p class="text-secondary mf-eyebrow">MANIFESTO</p>
+        <h2 class="mf-title">Club<br>Together</h2>
+        <div class="mf-mark">
+          <img src="/harmonia/brand/logo-simbolo.png" alt="" style="width:58px;height:auto">
+          <span class="text-secondary">Non solo un party. Un ecosistema.</span>
+        </div>
+      </div>
+      <div class="mf-body">
+        <p>Ispirato alla Harmonia Axyridis, Harmonia è un party che celebra l'eclettismo e la bellezza dell'incontro. Come i suoi puntini — ognuno unico, eppure parte dello stesso disegno — ogni persona che entra nel club è parte di un mosaico che dà colore al nostro universo.</p>
+        <p>Non esistono due serate uguali: Harmonia è un habitat libero e fluido, dove le differenze si fondono in un'unica vibrazione condivisa. Qui il clubbing torna alla sua essenza più pura: un'esperienza collettiva, fisica e sensoriale. Zero pose, zero filtri. Solo musica, sudore e connessione vera.</p>
+        <p>Harmonia è l'energia che scorre tra corpi che ballano insieme; è un ritmo che abbatte le barriere. È la casa di chi non cerca etichette, ma emozioni vere.</p>
+        <p>Non è solo un party. È un ecosistema. Colorato, mutante, vivo.</p>
+      </div>
     </div>
   </div>
 </section>
-<section class="bg-white">
+<section class="bg-white home-cards">
   <div class="container py-huge">
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-big">
-      <a href="/eventi" class="block group border border-gray-200 p-big hover:border-red-500 transition-colors">
-              <img src="/harmonia/foto/crowd-1.jpg" alt="EVENTI" class="w-full aspect-[4/3] object-cover mb-medium">
-              <span class="text-h3 flex items-center justify-between">EVENTI<span aria-hidden="true">&rarr;</span></span>
-            </a><a href="/artisti" class="block group border border-gray-200 p-big hover:border-red-500 transition-colors">
-              <img src="/harmonia/foto/mason-collective.jpg" alt="ARTISTI" class="w-full aspect-[4/3] object-cover mb-medium">
-              <span class="text-h3 flex items-center justify-between">ARTISTI<span aria-hidden="true">&rarr;</span></span>
-            </a><a href="/galleria" class="block group border border-gray-200 p-big hover:border-red-500 transition-colors">
-              <img src="/harmonia/foto/people-6.jpg" alt="GALLERIA" class="w-full aspect-[4/3] object-cover mb-medium">
-              <span class="text-h3 flex items-center justify-between">GALLERIA<span aria-hidden="true">&rarr;</span></span>
-            </a><a href="/partner" class="block group border border-gray-200 p-big hover:border-red-500 transition-colors">
-              <img src="/harmonia/foto/people-4.jpg" alt="PARTNER" class="w-full aspect-[4/3] object-cover mb-medium">
-              <span class="text-h3 flex items-center justify-between">PARTNER<span aria-hidden="true">&rarr;</span></span>
-            </a>
+    <div class="hc-head">
+      <span class="text-secondary">ESPLORA</span>
+      <h2 class="hc-title">Entra nell'ecosistema</h2>
+    </div>
+    <div class="hc-grid">
+      <a href="/eventi" class="hc-card">
+        <img src="/harmonia/foto/crowd-1.jpg" alt="Eventi Harmonia">
+        <div class="hc-overlay">
+          <span class="hc-label">Eventi</span>
+          <span class="hc-desc">Le prossime date</span>
+        </div>
+        <span class="hc-arrow" aria-hidden="true">&#8599;</span>
+      </a>
+      <a href="/artisti" class="hc-card">
+        <img src="/harmonia/foto/mason-collective.jpg" alt="Artisti Harmonia">
+        <div class="hc-overlay">
+          <span class="hc-label">Artisti</span>
+          <span class="hc-desc">Chi sale in console</span>
+        </div>
+        <span class="hc-arrow" aria-hidden="true">&#8599;</span>
+      </a>
+      <a href="/galleria" class="hc-card">
+        <img src="/harmonia/foto/people-6.jpg" alt="Galleria Harmonia">
+        <div class="hc-overlay">
+          <span class="hc-label">Galleria</span>
+          <span class="hc-desc">Dentro le nostre notti</span>
+        </div>
+        <span class="hc-arrow" aria-hidden="true">&#8599;</span>
+      </a>
+      <a href="/partner" class="hc-card">
+        <img src="/harmonia/foto/people-4.jpg" alt="Partner Harmonia">
+        <div class="hc-overlay">
+          <span class="hc-label">Partner</span>
+          <span class="hc-desc">Porta Harmonia da te</span>
+        </div>
+        <span class="hc-arrow" aria-hidden="true">&#8599;</span>
+      </a>
     </div>
   </div>
 </section>

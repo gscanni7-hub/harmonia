@@ -1360,7 +1360,14 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 			</div>
 
 			<div class="space-y-big lg:space-y-bigger lg:pr-bigger">
-				<h3 class="text-secondary max-lg:hidden">CLUB TOGETHER</h3><img src="/harmonia/brand/logo-simbolo.png" alt="Harmonia" class="w-2/3 max-w-[180px] h-auto opacity-90">
+				<h3 class="text-secondary">COMMUNITY</h3>
+				<form class="relative group" x-data="{ email: '' }" @submit.prevent="if(email){window.location.href='mailto:harmoniaeventiita@gmail.com?subject='+encodeURIComponent('Iscrizione newsletter')+'&amp;body='+encodeURIComponent('Vorrei iscrivermi alla newsletter: '+email); email=''}" aria-label="Iscriviti alla newsletter">
+					<div class="relative">
+						<input type="email" x-model="email" required placeholder="scrivi la tua email.." id="nl-email" class="relative z-1 transition-all block w-full pb-small lg:pb-medium pr-20 border-b border-gray-200 text-base outline-none group-hover:border-red-500 group-hover:placeholder:opacity-100 group-focus-within:placeholder:opacity-100 placeholder:opacity-0 placeholder:text-gray-400 focus:outline-none focus:border-red-500">
+						<label for="nl-email" class="block text-sm/6 absolute z-0 bottom-13 lg:bottom-big inset-x-0 group-focus-within:hidden group-hover:hidden">JOIN NEWSLETTER</label>
+						<button type="submit" class="absolute right-0 bottom-13 lg:bottom-big w-16 h-20 z-1" aria-label="Iscriviti"><svg class="size-24 w-16 h-20" width="12" height="11" fill="none" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg"><path d="m.511563 2.568 2.255997-2.352h8.46404v8.272l-2.44804 2.256v-4c0-.896.01067-1.696.032-2.4l-6.272 6.08-1.695997-1.84 6.223997-6.048c-.704.02133-1.50933.032-2.416.032z" fill="#ff0300"></path></svg></button>
+					</div>
+				</form>
 			</div>
 
 			<div class="space-y-big lg:space-y-bigger lg:pr-bigger">

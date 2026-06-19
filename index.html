@@ -698,16 +698,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 @media (min-width:1440px){.pill-carousel .embla__slide{max-width:460px}}
 </style>
 <style id="harmonia-ww2">
-.worldwide2 .ww2-title{margin-bottom:clamp(20px,2.5vw,36px);text-transform:uppercase}
-.worldwide2 .ww2-grid{display:grid;grid-template-columns:1fr;gap:var(--spacing-big)}
-@media (min-width:640px){.worldwide2 .ww2-grid{grid-template-columns:1fr 1fr}}
-@media (min-width:1024px){.worldwide2 .ww2-grid{grid-template-columns:repeat(4,1fr)}}
-.worldwide2 .event-card2{display:block}
-.worldwide2 .event-image-wrapper img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.worldwide2 .ww2-title{text-transform:uppercase;margin:0}
+.worldwide2 .event-image-wrapper img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
 .worldwide2 .event-card2:hover .event-image-wrapper img{transform:scale(1.04)}
 .worldwide2 .event-content{align-items:baseline;gap:12px}
-.worldwide2 .event-title2{font-size:clamp(15px,1.1vw,17px);font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
-.worldwide2 .event-date2{font-size:clamp(13px,1vw,15px);color:var(--color-gray-400);white-space:nowrap}
+.worldwide2 .event-title2{font-size:clamp(14px,1vw,16px);font-weight:800;text-transform:uppercase;letter-spacing:.04em;line-height:1.1;margin:0}
+.worldwide2 .event-date2{font-size:clamp(13px,.95vw,15px);color:var(--color-gray-400);white-space:nowrap;text-transform:uppercase;letter-spacing:.04em}
 </style></head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -1278,16 +1274,15 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
   </div>
 </section>
 <section class="bg-white-loco worldwide2">
-  <div class="container py-big">
-    <h2 class="text-h2-medium ww2-title">Worldwide</h2>
-    <div class="ww2-grid">
+  <h2 class="text-h2-medium ww2-title px-big py-big lg:py-bigger">Worldwide</h2>
+  <div class="ww2-grid grid grid-cols-2 lg:grid-cols-4 gap-big px-big pb-bigger">
       <a class="event-card2" href="/eventi">
         <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
           <img src="/harmonia/foto/people-1.jpg" alt="Harmonia Capri" class="w-full h-full object-cover" loading="lazy">
         </div>
         <div class="event-content flex justify-between">
           <h3 class="event-title2">Capri</h3>
-          <div class="event-date2">27 Giugno 2026</div>
+          <div class="event-date2">27 Giu 2026</div>
         </div>
       </a>
       <a class="event-card2" href="/eventi">
@@ -1296,7 +1291,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         </div>
         <div class="event-content flex justify-between">
           <h3 class="event-title2">Fondi &middot; Gaeta</h3>
-          <div class="event-date2">10 Luglio 2026</div>
+          <div class="event-date2">10 Lug 2026</div>
         </div>
       </a>
       <a class="event-card2" href="/eventi">
@@ -1314,7 +1309,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         </div>
         <div class="event-content flex justify-between">
           <h3 class="event-title2">Mykonos</h3>
-          <div class="event-date2">7 Agosto 2026</div>
+          <div class="event-date2">7 Ago 2026</div>
         </div>
       </a>
       <a class="event-card2" href="/eventi">
@@ -1323,7 +1318,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         </div>
         <div class="event-content flex justify-between">
           <h3 class="event-title2">Porto Cervo</h3>
-          <div class="event-date2">17 Agosto 2026</div>
+          <div class="event-date2">17 Ago 2026</div>
         </div>
       </a>
       <a class="event-card2" href="/eventi">
@@ -1332,10 +1327,27 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
         </div>
         <div class="event-content flex justify-between">
           <h3 class="event-title2">Sorrento Coast</h3>
-          <div class="event-date2">29 Agosto 2026</div>
+          <div class="event-date2">29 Ago 2026</div>
         </div>
       </a>
-    </div>
+      <a class="event-card2" href="/eventi">
+        <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
+          <img src="/harmonia/foto/people-4.jpg" alt="Harmonia Positano" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="event-content flex justify-between">
+          <h3 class="event-title2">Positano</h3>
+          <div class="event-date2">5 Set 2026</div>
+        </div>
+      </a>
+      <a class="event-card2" href="/eventi">
+        <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
+          <img src="/harmonia/foto/people-6.jpg" alt="Harmonia Taormina" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="event-content flex justify-between">
+          <h3 class="event-title2">Taormina</h3>
+          <div class="event-date2">12 Set 2026</div>
+        </div>
+      </a>
   </div>
 </section>
 <section class="bg-white-loco manifesto">

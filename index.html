@@ -710,17 +710,22 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 </style><script src="/harmonia/eventi-data.js"></script>
 <style id="harmonia-records-band">
 .hrp-wrap{background:#f9fafd}
-.hrp-pad{padding-block:clamp(40px,5vw,72px)}
-.hrp-card{display:flex;align-items:center;gap:clamp(15px,1.8vw,20px);max-width:560px;margin-inline:auto;background:#fff;border:1px solid var(--color-gray-200);border-radius:6px;box-shadow:0 16px 36px -24px rgba(0,0,0,.32);padding:clamp(13px,1.4vw,16px);transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;cursor:pointer}
-.hrp-card:hover{border-color:var(--color-red);transform:translateY(-2px);box-shadow:0 22px 44px -24px rgba(0,0,0,.4)}
-.hrp-img{flex:0 0 auto;width:clamp(76px,8vw,92px);aspect-ratio:1/1;border-radius:5px;overflow:hidden;background:#0c0b0d;display:flex;align-items:center;justify-content:center}
+.hrp-pad{padding-block:clamp(36px,4.5vw,64px)}
+.hrp-card{display:flex;flex-wrap:wrap;align-items:center;gap:16px;width:100%;background:#fff;border:1px solid var(--color-gray-200);border-radius:6px;box-shadow:0 16px 36px -26px rgba(0,0,0,.3);padding:clamp(14px,1.5vw,20px) clamp(16px,2vw,26px);transition:border-color .2s ease,box-shadow .2s ease;cursor:pointer}
+.hrp-card:hover{border-color:var(--color-red);box-shadow:0 22px 46px -26px rgba(0,0,0,.38)}
+.hrp-main{display:flex;align-items:center;gap:clamp(15px,1.8vw,22px);flex:1 1 auto;min-width:0}
+.hrp-img{flex:0 0 auto;width:clamp(64px,7vw,84px);aspect-ratio:1/1;border-radius:5px;overflow:hidden;background:#0c0b0d;display:flex;align-items:center;justify-content:center}
 .hrp-img img{width:58%;height:auto;display:block}
-.hrp-body{flex:1;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:14px}
 .hrp-text{min-width:0}
-.hrp-title{display:block;font-size:clamp(17px,1.5vw,20px);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+.hrp-title{display:block;font-size:clamp(17px,1.5vw,21px);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
 .hrp-sub{display:block;font-size:13px;line-height:1.35;color:var(--color-gray-400);margin-top:5px}
-.hrp-arrow{flex:0 0 auto;color:var(--color-red);font-size:20px;line-height:1;transition:transform .25s ease}
+.hrp-cta{margin-left:auto;flex:0 0 auto;position:relative;display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0a;padding-bottom:7px;white-space:nowrap}
+.hrp-cta::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:rgba(10,10,10,.18)}
+.hrp-cta::before{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--color-red);transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.hrp-card:hover .hrp-cta::before{width:100%}
+.hrp-arrow{color:var(--color-red);font-size:15px;transition:transform .25s ease}
 .hrp-card:hover .hrp-arrow{transform:translateX(5px)}
+@media (max-width:639px){.hrp-cta{margin-left:0;width:100%;margin-top:2px}}
 </style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
@@ -1176,14 +1181,14 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 <section class="hrp-wrap">
   <div class="container hrp-pad">
     <a class="hrp-card" href="/records" aria-label="HARM Records - invia la tua demo">
-      <span class="hrp-img"><img src="/harmonia/brand/logo-simbolo-bianco.png" alt=""></span>
-      <span class="hrp-body">
+      <span class="hrp-main">
+        <span class="hrp-img"><img src="/harmonia/brand/logo-simbolo-bianco.png" alt=""></span>
         <span class="hrp-text">
           <span class="hrp-title">HARM Records</span>
-          <span class="hrp-sub">La label di Harmonia &middot; invia la tua demo</span>
+          <span class="hrp-sub">L'estensione discografica di Harmonia</span>
         </span>
-        <span class="hrp-arrow" aria-hidden="true">&rarr;</span>
       </span>
+      <span class="hrp-cta"><span>Invia la tua demo</span><span class="hrp-arrow" aria-hidden="true">&rarr;</span></span>
     </a>
   </div>
 </section>

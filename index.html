@@ -709,13 +709,30 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .worldwide2 .event-date2{font-size:clamp(13px,.95vw,15px);color:var(--color-gray-400);white-space:nowrap;text-transform:uppercase;letter-spacing:.04em}
 </style><script src="/harmonia/eventi-data.js"></script>
 <style id="harmonia-records-band">
-.hr-band{background:#f3efe8}
-.hr-band .hr-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(14px,1.6vw,22px)}
-.hr-band .hr-eyebrow{letter-spacing:.28em;margin:0}
-.hr-band .hr-title{font-size:clamp(40px,6vw,96px);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.005em;margin:0}
-.hr-band .hr-lead{max-width:46ch;font-size:clamp(16px,1.3vw,19px);line-height:1.55;color:#4a4843;margin:0;text-transform:none;font-weight:500;letter-spacing:0}
-.hr-band .hr-cta{display:inline-flex;align-items:center;gap:10px;margin-top:8px;background:var(--color-red);color:#fff;padding:15px 30px;border-radius:5px;font-size:14px;letter-spacing:.05em;transition:opacity .2s}
-.hr-band .hr-cta:hover{opacity:.88}
+.hr2{position:relative;overflow:hidden;background:#0c0b0d;color:#f4f3ef;isolation:isolate}
+.hr2::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.06;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hr2-glow{position:absolute;top:-28%;right:-12%;width:62vw;height:62vw;max-width:780px;max-height:780px;background:radial-gradient(circle,rgba(255,3,0,.22),rgba(255,3,0,0) 62%);pointer-events:none;z-index:0}
+.hr2-mark{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:44vw;max-width:540px;height:auto;opacity:.05;z-index:0;pointer-events:none;user-select:none}
+.hr2-inner{position:relative;z-index:2;padding-block:clamp(64px,10vw,140px)}
+.hr2-top{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid rgba(255,255,255,.14);padding-top:18px;margin-bottom:clamp(30px,5vw,64px)}
+.hr2-meta{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#9b9a94;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.hr2-dot{width:7px;height:7px;border-radius:50%;background:var(--color-red);box-shadow:0 0 14px var(--color-red)}
+.hr2-title{font-size:clamp(46px,9vw,128px);font-weight:800;line-height:.9;letter-spacing:-.012em;text-transform:uppercase;margin:0}
+.hr2-rule{width:64px;height:2px;background:var(--color-red);margin:clamp(24px,3.2vw,38px) 0}
+.hr2-lead{max-width:46ch;font-size:clamp(16px,1.25vw,19px);line-height:1.6;color:#b3b1aa;margin:0 0 clamp(30px,3.5vw,42px);text-transform:none;font-weight:500;letter-spacing:0}
+.hr2-cta{position:relative;display:inline-flex;align-items:center;gap:12px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:#f4f3ef;padding-bottom:9px}
+.hr2-cta::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:rgba(255,255,255,.22)}
+.hr2-cta::before{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--color-red);transition:width .45s cubic-bezier(.2,.7,.2,1);z-index:1}
+.hr2-cta:hover::before{width:100%}
+.hr2-cta-arrow{color:var(--color-red);transition:transform .3s ease;font-size:16px}
+.hr2-cta:hover .hr2-cta-arrow{transform:translateX(7px)}
+.hr2-top,.hr2-title,.hr2-rule,.hr2-lead,.hr2-cta{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.hr2--in .hr2-top{opacity:1;transform:none;transition-delay:.02s}
+.hr2--in .hr2-title{opacity:1;transform:none;transition-delay:.12s}
+.hr2--in .hr2-rule{opacity:1;transform:none;transition-delay:.22s}
+.hr2--in .hr2-lead{opacity:1;transform:none;transition-delay:.3s}
+.hr2--in .hr2-cta{opacity:1;transform:none;transition-delay:.4s}
+@media (prefers-reduced-motion:reduce){.hr2-top,.hr2-title,.hr2-rule,.hr2-lead,.hr2-cta{opacity:1!important;transform:none!important;transition:none}}
 </style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
@@ -1168,12 +1185,18 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       
 
 
-<section class="hr-band">
-  <div class="container py-huge hr-inner">
-    <span class="hr-eyebrow text-secondary">LABEL</span>
-    <h2 class="hr-title">HARM Records</h2>
-    <p class="hr-lead">L'estensione discografica di Harmonia: la stessa energia del club, su traccia. Hai un brano che suona come noi? Inviacelo.</p>
-    <a class="hr-cta" href="/records">INVIA LA TUA DEMO <span aria-hidden="true">&#8594;</span></a>
+<section class="hr2" x-data="{shown:false}" x-intersect.once="shown=true" :class="{'hr2--in':shown}">
+  <div class="hr2-glow" aria-hidden="true"></div>
+  <img class="hr2-mark" src="/harmonia/brand/logo-simbolo-bianco.png" alt="" aria-hidden="true">
+  <div class="container hr2-inner">
+    <div class="hr2-top">
+      <span class="hr2-meta"><span class="hr2-dot"></span>Label</span>
+      <span class="hr2-meta">Napoli &middot; Italia</span>
+    </div>
+    <h2 class="hr2-title">Harm<br>Records</h2>
+    <div class="hr2-rule"></div>
+    <p class="hr2-lead">L'estensione discografica di Harmonia: la stessa energia del club, su traccia. Hai un brano che suona come noi? Inviacelo &mdash; arriva dritto in etichetta.</p>
+    <a class="hr2-cta" href="/records"><span>Invia la tua demo</span><span class="hr2-cta-arrow" aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 <footer class="py-big bg-white-loco border-t border-gray-200 max-w-screen overflow-x-hidden" x-data="soundcloudLazy">

@@ -289,6 +289,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .agenda .ag-row:hover .ag-go{opacity:1;transform:translate(3px,-3px)}
 @media(max-width:767px){.agenda .ag-go{display:none}.agenda .ag-line{color:var(--color-gray-400)}}
 </style>
+<script src="/harmonia/eventi-data.js"></script>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -367,8 +368,8 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 
 
 
-<section class="bg-white-loco agenda">
-  <div class="container py-huge">
+<section class="bg-white-loco agenda" x-data="harmoniaAgenda()">
+  <div class="container py-bigger">
     <div class="ag-head">
       <div>
         <span class="ag-eyebrow text-secondary">EVENTI &middot; ESTATE 2026</span>
@@ -376,52 +377,21 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       </div>
     </div>
     <div class="ag-list">
-      <a class="ag-row" href="/eventi">
-        <span class="ag-date"><span class="ag-d">27</span><span class="ag-m">GIU</span></span>
-        <span class="ag-place">Harmonia Capri<span class="ag-venue">Hotel Punta Tragara &middot; after Ambasciatori</span></span>
-        <span class="ag-line">Luigi Landolfo &middot; Jaden Thompson</span>
-        <span class="ag-go" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="ag-row" href="/eventi">
-        <span class="ag-date"><span class="ag-d">10</span><span class="ag-m">LUG</span></span>
-        <span class="ag-place">Harmonia Fondi<span class="ag-venue">Gaeta</span></span>
-        <span class="ag-line">Archie Hamilton &middot; Luigi Landolfo &middot; Roberto Morra</span>
-        <span class="ag-go" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="ag-row" href="/eventi">
-        <span class="ag-date"><span class="ag-d">18</span><span class="ag-m">LUG</span></span>
-        <span class="ag-place">Harmonia Ischia<span class="ag-venue">in collaborazione con Atarashi</span></span>
-        <span class="ag-line">DJ Tennis &middot; Chris Bowl &middot; Luigi Landolfo</span>
-        <span class="ag-go" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="ag-row" href="/eventi">
-        <span class="ag-date"><span class="ag-d">01</span><span class="ag-m">AGO</span></span>
-        <span class="ag-place">Harmonia Ischia</span>
-        <span class="ag-line">Saraga &middot; Tropeano &middot; Luigi Landolfo</span>
-        <span class="ag-go" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="ag-row" href="/eventi">
-        <span class="ag-date"><span class="ag-d">07</span><span class="ag-m">AGO</span></span>
-        <span class="ag-place">Harmonia Mykonos</span>
-        <span class="ag-line">Sem Jacobs &middot; Chris Bowl</span>
-        <span class="ag-go" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="ag-row" href="/eventi">
-        <span class="ag-date"><span class="ag-d">17</span><span class="ag-m">AGO</span></span>
-        <span class="ag-place">Harmonia Porto Cervo<span class="ag-venue">The Sanctuary</span></span>
-        <span class="ag-line">Davide Squillace &middot; Luigi Landolfo</span>
-        <span class="ag-go" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="ag-row" href="/eventi">
-        <span class="ag-date"><span class="ag-d">29</span><span class="ag-m">AGO</span></span>
-        <span class="ag-place">Harmonia Sorrento Coast<span class="ag-venue">Maya</span></span>
-        <span class="ag-line">Traumer &middot; Tropeano &middot; Chris Bowl</span>
-        <span class="ag-go" aria-hidden="true">&#8599;</span>
-      </a>
+      <template x-for="e in upcoming" :key="e.date+e.title">
+        <a class="ag-row" href="/eventi">
+          <span class="ag-date"><span class="ag-d" x-text="dt(e.date).gg"></span><span class="ag-m" x-text="dt(e.date).m"></span></span>
+          <span class="ag-place"><span x-text="e.title"></span><template x-if="e.sub"><span class="ag-venue" x-text="e.sub"></span></template></span>
+          <span class="ag-line" x-text="e.lineup"></span>
+          <span class="ag-go" aria-hidden="true">&#8599;</span>
+        </a>
+      </template>
+      <template x-if="upcoming.length===0">
+        <p style="padding:24px 0;color:var(--color-gray-400)">Nuove date in arrivo &mdash; seguici su Instagram.</p>
+      </template>
     </div>
   </div>
 </section>
-<section class="bg-white agenda agenda-past">
+<section class="bg-white agenda agenda-past" x-data="harmoniaAgenda()">
   <div class="container py-bigger">
     <div class="ag-head">
       <div>
@@ -430,61 +400,13 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       </div>
     </div>
     <div class="ag-list">
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">30</span><span class="ag-m">Mag '26</span></span>
-        <span class="ag-place">Maya<span class="ag-venue">Sorrento</span></span>
-        <span class="ag-line">Luciano &middot; Cesar Merveille &middot; La Hara &middot; Luigi Landolfo &middot; Ludo Erre &middot; W/ Maya elements &amp; Global Iconics</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">25</span><span class="ag-m">Apr '26</span></span>
-        <span class="ag-place">Maya<span class="ag-venue">Sorrento</span></span>
-        <span class="ag-line">Chelina Manuhutu &middot; Alessio Cristiano &middot; Claudio Pascale &middot; Cristian Volpe &middot; Julia</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">27</span><span class="ag-m">Mar '26</span></span>
-        <span class="ag-place">Duel<span class="ag-venue">Napoli</span></span>
-        <span class="ag-line">Mita Gami &middot; La Hara &middot; Luigi Landolfo &middot; W/ Maya elements</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">27</span><span class="ag-m">Feb '26</span></span>
-        <span class="ag-place">The Circle<span class="ag-venue">Roma</span></span>
-        <span class="ag-line">Joey Daniel &middot; Luigi Landolfo &middot; Gianluca Luciani</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">13</span><span class="ag-m">Feb '26</span></span>
-        <span class="ag-place">Duel<span class="ag-venue">Napoli</span></span>
-        <span class="ag-line">Kidoo &middot; Elbio &amp; Denis &middot; Chris Bowl &middot; Claudio Pascale</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">03</span><span class="ag-m">Gen '26</span></span>
-        <span class="ag-place">Chalet Valentino<span class="ag-venue">Roccaraso</span></span>
-        <span class="ag-line">Marco Tropeano &middot; Mind The Gap &middot; Luigi Landolfo</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">12</span><span class="ag-m">Dic '25</span></span>
-        <span class="ag-place">Forma<span class="ag-venue">Napoli</span></span>
-        <span class="ag-line">Salome Le Chat &middot; Chris Bowl &middot; Luigi Landolfo &middot; Fabricio</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">19</span><span class="ag-m">Ago '25</span></span>
-        <span class="ag-place">Negombo<span class="ag-venue">Ischia</span></span>
-        <span class="ag-line">Deborah De Luca &middot; MRPHN</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">09</span><span class="ag-m">Ago '25</span></span>
-        <span class="ag-place">Negombo<span class="ag-venue">Ischia</span></span>
-        <span class="ag-line">Nic Fanciulli &middot; Ale de Tuglie &middot; Chris Bowl &middot; Luigi Landolfo</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">18</span><span class="ag-m">Lug '25</span></span>
-        <span class="ag-place">Negombo<span class="ag-venue">Ischia</span></span>
-        <span class="ag-line">Mason Collective &middot; Marco Tropeano &middot; Chris Bowl &middot; W/ Atarashi</span>
-      </div>
-      <div class="ag-row">
-        <span class="ag-date"><span class="ag-d">03</span><span class="ag-m">Gen '25</span></span>
-        <span class="ag-place">Arenile<span class="ag-venue">Napoli</span></span>
-        <span class="ag-line">Andrea Oliva &middot; Alessio Cristiano &middot; Luigi Landolfo &middot; Claudio Pascale</span>
-      </div>
+      <template x-for="e in past" :key="e.date+e.title">
+        <div class="ag-row">
+          <span class="ag-date"><span class="ag-d" x-text="dt(e.date).gg"></span><span class="ag-m" x-text="dt(e.date).m"></span></span>
+          <span class="ag-place"><span x-text="e.title"></span><template x-if="e.sub"><span class="ag-venue" x-text="e.sub"></span></template></span>
+          <span class="ag-line" x-text="e.lineup"></span>
+        </div>
+      </template>
     </div>
   </div>
 </section>

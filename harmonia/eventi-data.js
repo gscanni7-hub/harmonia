@@ -19,11 +19,11 @@ window.HARMONIA_EVENTI = [
   { date:'2025-08-19', title:'Negombo',          sub:'Ischia',    lineup:'Deborah De Luca · MRPHN', foto:'deborah-de-luca', around:'Negombo · Ischia' },
   { date:'2025-12-12', title:'Forma',            sub:'Napoli',    lineup:'Salome Le Chat · Chris Bowl · Luigi Landolfo · Fabricio', foto:'salome-le-chat', around:'Forma · Napoli' },
   { date:'2026-01-03', title:'Chalet Valentino', sub:'Roccaraso', lineup:'Marco Tropeano · Mind The Gap · Luigi Landolfo', foto:'marco-tropeano', around:'Chalet Valentino · Roccaraso' },
-  { date:'2026-02-13', title:'Duel',             sub:'Napoli',    lineup:'Kidoo · Elbio & Denis · Chris Bowl · Claudio Pascale', foto:'kidoo', around:'Duel · Napoli' },
-  { date:'2026-02-27', title:'The Circle',       sub:'Roma',      lineup:'Joey Daniel · Luigi Landolfo · Gianluca Luciani', foto:'crowd-1', around:'The Circle · Roma' },
-  { date:'2026-03-27', title:'Duel',             sub:'Napoli',    lineup:'Mita Gami · La Hara · Luigi Landolfo · W/ Maya elements', foto:'mita-gami', around:'Duel · Napoli' },
-  { date:'2026-04-25', title:'Maya',             sub:'Sorrento',  lineup:'Chelina Manuhutu · Alessio Cristiano · Claudio Pascale · Cristian Volpe · Julia', foto:'chelina-manuhutu', around:'Maya · Sorrento' },
-  { date:'2026-05-30', title:'Maya',             sub:'Sorrento',  lineup:'Luciano · Cesar Merveille · La Hara · Luigi Landolfo · Ludo Erre · W/ Maya elements & Global Iconics', foto:'crowd-2', around:'Maya · Sorrento' }
+  { date:'2026-02-13', video:'2026-02-13.mp4', title:'Duel',             sub:'Napoli',    lineup:'Kidoo · Elbio & Denis · Chris Bowl · Claudio Pascale', foto:'kidoo', around:'Duel · Napoli' },
+  { date:'2026-02-27', video:'2026-02-27.mp4', title:'The Circle',       sub:'Roma',      lineup:'Joey Daniel · Luigi Landolfo · Gianluca Luciani', foto:'crowd-1', around:'The Circle · Roma' },
+  { date:'2026-03-27', video:'2026-03-27.mp4', title:'Duel',             sub:'Napoli',    lineup:'Mita Gami · La Hara · Luigi Landolfo · W/ Maya elements', foto:'mita-gami', around:'Duel · Napoli' },
+  { date:'2026-04-25', video:'2026-04-25.mp4', title:'Maya',             sub:'Sorrento',  lineup:'Chelina Manuhutu · Alessio Cristiano · Claudio Pascale · Cristian Volpe · Julia', foto:'chelina-manuhutu', around:'Maya · Sorrento' },
+  { date:'2026-05-30', video:'2026-05-30.mp4', title:'Maya',             sub:'Sorrento',  lineup:'Luciano · Cesar Merveille · La Hara · Luigi Landolfo · Ludo Erre · W/ Maya elements & Global Iconics', foto:'crowd-2', around:'Maya · Sorrento' }
 ];
 
 window.HARMONIA = {

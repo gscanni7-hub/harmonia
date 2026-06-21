@@ -701,8 +701,8 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 <style id="harmonia-ww2">
 .worldwide2 .ww2-title{text-transform:uppercase;margin:0}
 .worldwide2 .event-image-wrapper{position:relative}
-.worldwide2 .event-image-wrapper img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
-.worldwide2 .event-card2:hover .event-image-wrapper img{transform:scale(1.04)}
+.worldwide2 .event-image-wrapper img,.worldwide2 .event-image-wrapper video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.worldwide2 .event-card2:hover .event-image-wrapper img,.worldwide2 .event-card2:hover .event-image-wrapper video{transform:scale(1.04)}
 .worldwide2 .ww2-soon{position:absolute;top:10px;left:10px;z-index:2;background:var(--color-red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px}
 .worldwide2 .event-content{align-items:baseline;gap:12px}
 .worldwide2 .event-title2{font-size:clamp(14px,1vw,16px);font-weight:800;text-transform:uppercase;letter-spacing:.04em;line-height:1.15;margin:0}
@@ -1137,7 +1137,12 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       <a class="event-card2" href="/eventi">
         <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
           <template x-if="e.soon"><span class="ww2-soon">Prossimo</span></template>
-          <img :src="'/harmonia/foto/'+e.foto+'.jpg'" :alt="'Harmonia '+e.around" class="w-full h-full object-cover" loading="lazy">
+          <template x-if="e.video">
+            <video class="w-full h-full object-cover" :poster="'/harmonia/foto/'+e.foto+'.jpg'" :src="'/harmonia/video/'+e.video" muted loop playsinline preload="none" x-intersect.threshold.25="$el.play().catch(()=>{})" x-intersect:leave="$el.pause()"></video>
+          </template>
+          <template x-if="!e.video">
+            <img :src="'/harmonia/foto/'+e.foto+'.jpg'" :alt="'Harmonia '+e.around" class="w-full h-full object-cover" loading="lazy">
+          </template>
         </div>
         <div class="event-content flex justify-between">
           <h3 class="event-title2" x-text="e.around"></h3>

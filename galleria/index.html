@@ -155,6 +155,37 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .text-h2-medium{letter-spacing:.01em}
 .text-h3{letter-spacing:.015em}
 </style>
+<script>
+window.galleria = function () {
+  return {
+    fotos: ['/harmonia/foto/people-1.jpg','/harmonia/foto/people-2.jpg','/harmonia/foto/people-3.jpg','/harmonia/foto/people-4.jpg','/harmonia/foto/people-5.jpg','/harmonia/foto/people-6.jpg','/harmonia/foto/people-7.jpg','/harmonia/foto/people-8.jpg','/harmonia/foto/crowd-1.jpg','/harmonia/foto/crowd-2.jpg'],
+    idx: null, ts: 0,
+    open(i){ this.idx = i; document.body.style.overflow = 'hidden'; },
+    close(){ this.idx = null; document.body.style.overflow = ''; },
+    next(){ if (this.idx !== null) this.idx = (this.idx + 1) % this.fotos.length; },
+    prev(){ if (this.idx !== null) this.idx = (this.idx - 1 + this.fotos.length) % this.fotos.length; },
+    swipe(x){ var d = x - this.ts; if (Math.abs(d) > 40) { d < 0 ? this.next() : this.prev(); } }
+  };
+};
+</script>
+<style id="harmonia-galleria">
+.gallery .gl-eyebrow{display:block;letter-spacing:.24em;margin-bottom:12px}
+.gallery .gl-title{font-size:clamp(34px,5vw,72px);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.005em;margin:0}
+.gallery .gl-masonry{column-count:2;column-gap:clamp(8px,1.2vw,16px);padding-bottom:clamp(40px,6vw,90px)}
+@media (min-width:1024px){.gallery .gl-masonry{column-count:3}}
+.gallery .gl-item{display:block;width:100%;margin:0 0 clamp(8px,1.2vw,16px);padding:0;border:0;background:#0c0c0c;cursor:pointer;overflow:hidden;break-inside:avoid;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.gallery .gl-item.in{opacity:1;transform:none}
+.gallery .gl-item img{width:100%;height:auto;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.gallery .gl-item:hover img{transform:scale(1.05)}
+.gl-lb{position:fixed;inset:0;z-index:200;background:rgba(8,8,9,.95);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,60px)}
+.gl-lb-img{max-width:92vw;max-height:88vh;width:auto;height:auto;object-fit:contain;box-shadow:0 30px 80px -30px rgba(0,0,0,.85)}
+.gl-lb-close{position:absolute;top:clamp(12px,2vw,28px);right:clamp(12px,2vw,28px);background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;opacity:.85}
+.gl-lb-close:hover{opacity:1}
+.gl-lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;font-size:46px;line-height:1;cursor:pointer;opacity:.6;padding:8px 16px;transition:opacity .2s}
+.gl-lb-nav:hover{opacity:1}
+.gl-lb-prev{left:clamp(2px,1vw,20px)}
+.gl-lb-next{right:clamp(2px,1vw,20px)}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -223,49 +254,31 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 
   
   <main id="content" tabindex="-1" class="relative">
-    		<h1 class="text-h2-medium hidden lg:block text-right pt-huge px-big pb-bigger">Galleria</h1>
-		      	
-
-		        
-
-	
-			
-		<div class="editorial-grid grid grid-cols-1 lg:grid-cols-4 gap-bigger px-big max-lg:py-bigger lg:pb-huge"><article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/people-1.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/people-2.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/people-3.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/people-4.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/people-5.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/people-6.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/people-7.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/people-8.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/crowd-1.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article>
-<article class="editorial-grid-item relative">
-  <img src="/harmonia/foto/crowd-2.jpg" alt="Harmonia – la nostra gente" class="w-full h-auto object-cover" loading="lazy">
-</article></div>
-	
-
-
-					
-    
-	  </main>
+  <section class="bg-white gallery" x-data="galleria()">
+    <div class="container py-bigger">
+      <span class="gl-eyebrow text-secondary">HARMONIA</span>
+      <h1 class="gl-title">Galleria</h1>
+    </div>
+    <div class="container">
+      <div class="gl-masonry">
+        <template x-for="(src,i) in fotos" :key="src">
+          <button type="button" class="gl-item" @click="open(i)" x-intersect.once="$el.classList.add('in')" aria-label="Apri foto">
+            <img :src="src" alt="Harmonia &ndash; Club Together" loading="lazy">
+          </button>
+        </template>
+      </div>
+    </div>
+    <div class="gl-lb" x-show="idx!==null" x-cloak x-transition.opacity
+         @click.self="close()"
+         @keydown.escape.window="close()" @keydown.arrow-right.window="next()" @keydown.arrow-left.window="prev()"
+         @touchstart="ts=$event.changedTouches[0].clientX" @touchend="swipe($event.changedTouches[0].clientX)">
+      <button class="gl-lb-close" @click="close()" aria-label="Chiudi">&#10005;</button>
+      <button class="gl-lb-nav gl-lb-prev" @click="prev()" aria-label="Precedente">&#8249;</button>
+      <img class="gl-lb-img" :src="idx!==null ? fotos[idx] : ''" alt="">
+      <button class="gl-lb-nav gl-lb-next" @click="next()" aria-label="Successiva">&#8250;</button>
+    </div>
+  </section>
+</main>
 
       
 

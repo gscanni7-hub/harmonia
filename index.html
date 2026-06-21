@@ -709,19 +709,21 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .worldwide2 .event-date2{font-size:clamp(13px,.95vw,15px);color:var(--color-gray-400);white-space:nowrap;text-transform:uppercase;letter-spacing:.04em}
 </style><script src="/harmonia/eventi-data.js"></script>
 <style id="harmonia-records-band">
-.hr3{background:#f6f4f0;border-block:1px solid var(--color-gray-200)}
-.hr3-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:clamp(18px,4vw,52px);padding-block:clamp(32px,4.2vw,58px)}
-.hr3-l{max-width:60ch}
-.hr3-eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-gray-400);display:inline-flex;align-items:center;gap:9px;margin:0}
-.hr3-dot{width:6px;height:6px;border-radius:50%;background:var(--color-red)}
-.hr3-title{font-size:clamp(25px,2.7vw,40px);font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.005em;margin:11px 0 9px}
-.hr3-lead{font-size:15px;line-height:1.5;color:#5b5a55;margin:0;max-width:52ch;text-transform:none;font-weight:500}
-.hr3-cta{position:relative;flex:0 0 auto;display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#0a0a0a;padding-bottom:8px;white-space:nowrap}
-.hr3-cta::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:rgba(10,10,10,.2)}
-.hr3-cta::before{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--color-red);transition:width .4s cubic-bezier(.2,.7,.2,1)}
-.hr3-cta:hover::before{width:100%}
-.hr3-cta-arrow{color:var(--color-red);transition:transform .3s ease;font-size:15px}
-.hr3-cta:hover .hr3-cta-arrow{transform:translateX(6px)}
+.hr4-wrap{background:#f9fafd}
+.hr4-pad{padding-block:clamp(40px,5vw,76px)}
+.hr4{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:clamp(22px,4vw,56px);max-width:64rem;margin-inline:auto;background:#fff;border:1px solid var(--color-gray-200);padding:clamp(26px,3vw,42px) clamp(24px,3.5vw,48px)}
+.hr4-text{min-width:0;max-width:48ch}
+.hr4-eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-gray-400);display:inline-flex;align-items:center;gap:9px;margin:0}
+.hr4-dot{width:6px;height:6px;border-radius:50%;background:var(--color-red)}
+.hr4-title{font-size:clamp(24px,2.4vw,34px);font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.005em;margin:13px 0 9px}
+.hr4-lead{font-size:14.5px;line-height:1.55;color:#56554f;margin:0;text-transform:none;font-weight:500}
+.hr4-cta{position:relative;flex:0 0 auto;display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0a;padding-bottom:8px;cursor:pointer}
+.hr4-cta::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:rgba(10,10,10,.18)}
+.hr4-cta::before{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--color-red);transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.hr4-cta:hover::before{width:100%}
+.hr4-arrow{color:var(--color-red);transition:transform .25s ease;font-size:15px}
+.hr4-cta:hover .hr4-arrow{transform:translateX(6px)}
+@media (prefers-reduced-motion:reduce){.hr4-cta::before,.hr4-arrow{transition:none}}
 </style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
@@ -1174,14 +1176,16 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       
 
 
-<section class="hr3">
-  <div class="container hr3-inner">
-    <div class="hr3-l">
-      <p class="hr3-eyebrow"><span class="hr3-dot"></span>Label</p>
-      <h2 class="hr3-title">Harm Records</h2>
-      <p class="hr3-lead">L'estensione discografica di Harmonia. Hai un brano che suona come noi? Inviacelo, arriva dritto in etichetta.</p>
+<section class="hr4-wrap">
+  <div class="container hr4-pad">
+    <div class="hr4">
+      <div class="hr4-text">
+        <p class="hr4-eyebrow"><span class="hr4-dot"></span>Label</p>
+        <h2 class="hr4-title">Harm Records</h2>
+        <p class="hr4-lead">L'estensione discografica di Harmonia. Hai un brano che suona come noi? Inviacelo, arriva dritto in etichetta.</p>
+      </div>
+      <a class="hr4-cta" href="/records"><span>Invia la tua demo</span><span class="hr4-arrow" aria-hidden="true">&rarr;</span></a>
     </div>
-    <a class="hr3-cta" href="/records"><span>Invia la tua demo</span><span class="hr3-cta-arrow" aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 <footer class="py-big bg-white-loco border-t border-gray-200 max-w-screen overflow-x-hidden" x-data="soundcloudLazy">

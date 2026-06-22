@@ -223,17 +223,6 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .page-eyebrow{display:block;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px}
 .page-title{font-size:clamp(30px,3.6vw,56px);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.005em;margin:0}
 </style>
-<style id="harmonia-pgtext">
-.editorial-content .pg-lead{max-width:60ch;font-size:clamp(17px,1.4vw,21px);line-height:1.5;color:#56554f;font-weight:500;margin:0 0 clamp(30px,3.5vw,44px);text-transform:none}
-.editorial-content .pg-body{max-width:62ch}
-.editorial-content .pg-body>p{font-size:clamp(15px,1.1vw,17px);line-height:1.62;color:#1a1a1a;margin:0;text-transform:none}
-.editorial-content .pg-section{margin-top:clamp(30px,3.4vw,44px)}
-.editorial-content .pg-section:first-child{margin-top:0}
-.editorial-content .pg-section h3{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-red);font-weight:800;margin:0 0 10px}
-.editorial-content .pg-section p{font-size:clamp(15px,1.1vw,17px);line-height:1.62;color:#1a1a1a;margin:0;text-transform:none}
-.editorial-content .pg-section a{text-decoration:underline}
-.editorial-content .pg-form{max-width:62ch;margin-top:clamp(26px,3vw,38px);border:1px solid var(--color-gray-200);border-radius:10px;overflow:hidden}
-</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -306,12 +295,19 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 		<div class="editorial-content normal-case max-w-4xl">
 			<span class="page-eyebrow text-secondary">LA LABEL</span><h1 class="page-title" style="margin-bottom:var(--spacing-big)">HARM Records</h1>
 
-			<p class="pg-lead">Invia la tua demo. Il club è la casa, la musica è la porta.</p>
-			<div class="pg-body">
-				<p>HARM Records è l'estensione discografica dell'ecosistema Harmonia: lo stesso spirito del club, portato su traccia. Hai un brano che suona come noi? Inviacelo dal modulo qui sotto: arriva direttamente in etichetta e lo ascoltiamo davvero.</p>
-				<div class="pg-form"><iframe id="trackstack-embed-Harm-Records.ita" title="Invia le tue tracce a HARM Records.ita" src="https://tstack.app/Harm-Records.ita/embed/send?isDarkMode=false" style="width:100%;height:340px;border:0;background:#fff;display:block" scrolling="no" allowtransparency="true"></iframe></div>
-			</div>
-			<script>
+			<p class="editorial-subtitle text-gray-400 text-article text-article-desktop">Invia la tua demo. Il club è la casa, la musica è la porta.</p>
+
+			<div class="grid grid-cols-1 gap-y-bigger font-medium text-article text-article-desktop pb-70">
+<p>HARM Records è l'estensione discografica dell'ecosistema Harmonia: lo stesso spirito del club, portato su traccia. Hai un brano che suona come noi? Inviacelo dal modulo qui sotto: arriva direttamente in etichetta e lo ascoltiamo davvero.</p>
+<iframe
+    id="trackstack-embed-Harm-Records.ita"
+    title="Invia le tue tracce a HARM Records.ita"
+    src="https://tstack.app/Harm-Records.ita/embed/send?isDarkMode=false"
+    style="width: 100%; height: 600px; border: 0; background: #fff;"
+    scrolling="no"
+    allowtransparency="true"
+></iframe>
+<script>
 (function () {
     var frame = document.getElementById('trackstack-embed-Harm-Records.ita');
     if (!frame) return;
@@ -323,6 +319,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
     });
 })();
 </script>
+</div>
 
 		</div>
 	</div>

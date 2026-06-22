@@ -223,35 +223,6 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .page-eyebrow{display:block;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px}
 .page-title{font-size:clamp(30px,3.6vw,56px);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.005em;margin:0}
 </style>
-<style id="harmonia-pg2">
-.editorial-content .pz-lead,.editorial-content .rz-lead{max-width:58ch;font-size:clamp(17px,1.4vw,21px);line-height:1.5;color:#56554f;font-weight:500;margin:0 0 clamp(32px,4vw,50px);text-transform:none}
-.editorial-content .pz-rows{border-top:1px solid var(--color-gray-200);max-width:880px}
-.editorial-content .pz-row{display:grid;grid-template-columns:56px 1fr;gap:clamp(14px,3vw,36px);padding:clamp(22px,2.6vw,32px) 0;border-bottom:1px solid var(--color-gray-200);align-items:start}
-.editorial-content .pz-num{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;color:var(--color-red);font-weight:700;padding-top:5px}
-.editorial-content .pz-rt{font-size:clamp(18px,1.7vw,24px);font-weight:800;text-transform:uppercase;letter-spacing:.01em;margin:0 0 9px;line-height:1.05}
-.editorial-content .pz-rp{font-size:clamp(15px,1.1vw,16px);line-height:1.55;color:#3a3933;margin:0;max-width:58ch;text-transform:none;font-weight:400}
-.editorial-content .pz-foot{margin-top:clamp(34px,4vw,52px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(16px,2vw,28px)}
-.editorial-content .pz-cta{display:inline-flex;align-items:center;gap:10px;background:var(--color-red);color:#fff;padding:14px 28px;border-radius:6px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;transition:opacity .2s}
-.editorial-content .pz-cta:hover{opacity:.9}
-.editorial-content .pz-contacts{font-size:13.5px;color:var(--color-gray-400)}
-.editorial-content .pz-contacts a{color:#0a0a0a;text-decoration:underline}
-.editorial-content .rz-intro{max-width:60ch;font-size:clamp(15px,1.1vw,17px);line-height:1.62;color:#1a1a1a;margin:0 0 clamp(26px,3vw,36px);text-transform:none;font-weight:400}
-.editorial-content .rz-steps{display:flex;flex-wrap:wrap;gap:clamp(14px,2.4vw,34px);margin:0 0 clamp(26px,3vw,38px)}
-.editorial-content .rz-step{display:flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#0a0a0a}
-.editorial-content .rz-n{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--color-red);font-weight:700}
-.editorial-content .rz-form{max-width:560px;border:1px solid var(--color-gray-200);border-radius:12px;overflow:hidden}
-.editorial-content .rz-form-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:15px 20px;border-bottom:1px solid var(--color-gray-200)}
-.editorial-content .rz-form-head b{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#0a0a0a}
-.editorial-content .rz-form-head span{font-size:12px;color:var(--color-gray-400);letter-spacing:.04em}
-.editorial-content .rz-form iframe{display:block;width:100%}
-</style>
-<style id="harmonia-polish2">
-html{scroll-behavior:smooth}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-.editorial-content a:focus-visible,.pz-cta:focus-visible{outline:2px solid var(--color-red);outline-offset:3px;border-radius:3px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1 !important;transform:none !important;transition:none}}
-</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -324,14 +295,22 @@ html{scroll-behavior:smooth}
 		<div class="editorial-content normal-case max-w-4xl">
 			<span class="page-eyebrow text-secondary">IL FORMAT</span><h1 class="page-title" style="margin-bottom:var(--spacing-big)">Porta Harmonia nel tuo club</h1>
 
-			<p class="pz-lead">Harmonia non è una serata in affitto: è un format completo che porta il club al centro.</p>
-			<div class="pz-rows">
-				<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">01</span><div><h3 class="pz-rt">Direzione artistica</h3><p class="pz-rp">Lineup curata dal nostro roster esclusivo di DJ. Booking di guest internazionali su richiesta: i cachet si definiscono in base al profilo e alle esigenze di booking.</p></div></div>
-				<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">02</span><div><h3 class="pz-rt">Staging &amp; allestimento</h3><p class="pz-rp">Esperienza visiva su misura: scenografie custom con LED wall, installazioni luminose professionali e merchandising dedicato.</p></div></div>
-				<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">03</span><div><h3 class="pz-rt">Comunicazione</h3><p class="pz-rp">Identità visiva e grafica del brand, branded content, produzione video (teaser e promo), campagne Meta Ads e newsletter verso oltre 10.000 contatti.</p></div></div>
-				<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">04</span><div><h3 class="pz-rt">La collaborazione</h3><p class="pz-rp">Ogni collaborazione è su misura: costruiamo insieme il format e ne definiamo i termini. Comunicazione completa e insegna neon custom incluse (budget advertising escluso).</p></div></div>
-			</div>
-			<div class="pz-foot reveal" x-intersect.once="$el.classList.add('in')"><a class="pz-cta" href="mailto:harmoniaeventiita@gmail.com">Contattaci <span aria-hidden="true">&rarr;</span></a><span class="pz-contacts"><a href="tel:+393498357483">+39 349 835 7483</a> &middot; <a href="https://www.instagram.com/harmonia.ita/" target="_blank" rel="noopener">@harmonia.ita</a></span></div>
+			<p class="editorial-subtitle text-gray-400 text-article text-article-desktop">Harmonia non è una serata in affitto: è un format completo. Direzione artistica, allestimento, comunicazione e una community che cresce a ogni data. Un ecosistema che porta il club al centro.</p>
+
+			<div class="grid grid-cols-1 gap-y-bigger font-medium text-article text-article-desktop pb-70">
+<h3 class="font-extrabold text-article text-article-desktop pt-big">Direzione artistica</h3>
+<p>Lineup curata dal nostro roster esclusivo di DJ. Booking di guest internazionali disponibile su richiesta: i cachet vengono definiti in base al profilo dell'artista e alle esigenze di booking.</p>
+<h3 class="font-extrabold text-article text-article-desktop pt-big">Staging &amp; allestimento</h3>
+<p>Esperienza visiva su misura: progettazione e sviluppo di scenografie custom con LED wall, fornitura di installazioni luminose professionali e merchandising dedicato.</p>
+<h3 class="font-extrabold text-article text-article-desktop pt-big">Comunicazione</h3>
+<p>Identità visiva e grafica del brand, branded content, produzione video (teaser e promo), campagne Meta Ads (Instagram &amp; Facebook), newsletter verso un database di oltre 10.000 contatti e direct marketing.</p>
+<h3 class="font-extrabold text-article text-article-desktop pt-big">La collaborazione</h3>
+<p>Ogni collaborazione è su misura: costruiamo insieme il format e ne definiamo i termini. Sono incluse la comunicazione completa dell'evento e l'insegna neon custom (budget advertising escluso). Scrivici per parlarne.</p>
+<h3 class="font-extrabold text-article text-article-desktop pt-big">Contatti</h3>
+<p><a href="mailto:harmoniaeventiita@gmail.com"><u>harmoniaeventiita@gmail.com</u></a><br>
+<a href="tel:+393498357483"><u>+39 349 835 7483</u></a><br>
+<a href="https://www.instagram.com/harmonia.ita/" target="_blank"><u>@harmonia.ita</u></a></p>
+</div>
 
 		</div>
 	</div>

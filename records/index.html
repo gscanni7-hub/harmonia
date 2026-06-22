@@ -223,6 +223,28 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .page-eyebrow{display:block;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px}
 .page-title{font-size:clamp(30px,3.6vw,56px);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.005em;margin:0}
 </style>
+<style id="harmonia-pg2">
+.editorial-content .pz-lead,.editorial-content .rz-lead{max-width:58ch;font-size:clamp(17px,1.4vw,21px);line-height:1.5;color:#56554f;font-weight:500;margin:0 0 clamp(32px,4vw,50px);text-transform:none}
+.editorial-content .pz-rows{border-top:1px solid var(--color-gray-200);max-width:880px}
+.editorial-content .pz-row{display:grid;grid-template-columns:56px 1fr;gap:clamp(14px,3vw,36px);padding:clamp(22px,2.6vw,32px) 0;border-bottom:1px solid var(--color-gray-200);align-items:start}
+.editorial-content .pz-num{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;color:var(--color-red);font-weight:700;padding-top:5px}
+.editorial-content .pz-rt{font-size:clamp(18px,1.7vw,24px);font-weight:800;text-transform:uppercase;letter-spacing:.01em;margin:0 0 9px;line-height:1.05}
+.editorial-content .pz-rp{font-size:clamp(15px,1.1vw,16px);line-height:1.55;color:#3a3933;margin:0;max-width:58ch;text-transform:none;font-weight:400}
+.editorial-content .pz-foot{margin-top:clamp(34px,4vw,52px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(16px,2vw,28px)}
+.editorial-content .pz-cta{display:inline-flex;align-items:center;gap:10px;background:var(--color-red);color:#fff;padding:14px 28px;border-radius:6px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;transition:opacity .2s}
+.editorial-content .pz-cta:hover{opacity:.9}
+.editorial-content .pz-contacts{font-size:13.5px;color:var(--color-gray-400)}
+.editorial-content .pz-contacts a{color:#0a0a0a;text-decoration:underline}
+.editorial-content .rz-intro{max-width:60ch;font-size:clamp(15px,1.1vw,17px);line-height:1.62;color:#1a1a1a;margin:0 0 clamp(26px,3vw,36px);text-transform:none;font-weight:400}
+.editorial-content .rz-steps{display:flex;flex-wrap:wrap;gap:clamp(14px,2.4vw,34px);margin:0 0 clamp(26px,3vw,38px)}
+.editorial-content .rz-step{display:flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#0a0a0a}
+.editorial-content .rz-n{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--color-red);font-weight:700}
+.editorial-content .rz-form{max-width:560px;border:1px solid var(--color-gray-200);border-radius:12px;overflow:hidden}
+.editorial-content .rz-form-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:15px 20px;border-bottom:1px solid var(--color-gray-200)}
+.editorial-content .rz-form-head b{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#0a0a0a}
+.editorial-content .rz-form-head span{font-size:12px;color:var(--color-gray-400);letter-spacing:.04em}
+.editorial-content .rz-form iframe{display:block;width:100%}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -295,19 +317,14 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 		<div class="editorial-content normal-case max-w-4xl">
 			<span class="page-eyebrow text-secondary">LA LABEL</span><h1 class="page-title" style="margin-bottom:var(--spacing-big)">HARM Records</h1>
 
-			<p class="editorial-subtitle text-gray-400 text-article text-article-desktop">Invia la tua demo. Il club è la casa, la musica è la porta.</p>
-
-			<div class="grid grid-cols-1 gap-y-bigger font-medium text-article text-article-desktop pb-70">
-<p>HARM Records è l'estensione discografica dell'ecosistema Harmonia: lo stesso spirito del club, portato su traccia. Hai un brano che suona come noi? Inviacelo dal modulo qui sotto: arriva direttamente in etichetta e lo ascoltiamo davvero.</p>
-<iframe
-    id="trackstack-embed-Harm-Records.ita"
-    title="Invia le tue tracce a HARM Records.ita"
-    src="https://tstack.app/Harm-Records.ita/embed/send?isDarkMode=false"
-    style="width: 100%; height: 600px; border: 0; background: #fff;"
-    scrolling="no"
-    allowtransparency="true"
-></iframe>
-<script>
+			<p class="rz-lead">L'estensione discografica di Harmonia: lo stesso spirito del club, portato su traccia.</p>
+			<p class="rz-intro">Hai un brano che suona come noi? Inviacelo: arriva dritto in etichetta e lo ascoltiamo davvero.</p>
+			<div class="rz-steps"><span class="rz-step"><span class="rz-n">01</span>Carica la traccia</span><span class="rz-step"><span class="rz-n">02</span>Arriva in etichetta</span><span class="rz-step"><span class="rz-n">03</span>La ascoltiamo</span></div>
+			<div class="rz-form">
+				<div class="rz-form-head"><b>Invia la tua demo</b><span>.mp3 o .wav &middot; max 5 tracce</span></div>
+				<iframe id="trackstack-embed-Harm-Records.ita" title="Invia le tue tracce a HARM Records.ita" src="https://tstack.app/Harm-Records.ita/embed/send?isDarkMode=false" style="height:330px;border:0;background:#fff" scrolling="no" allowtransparency="true"></iframe>
+			</div>
+			<script>
 (function () {
     var frame = document.getElementById('trackstack-embed-Harm-Records.ita');
     if (!frame) return;
@@ -319,7 +336,6 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
     });
 })();
 </script>
-</div>
 
 		</div>
 	</div>

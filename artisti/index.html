@@ -155,6 +155,21 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .text-h2-medium{letter-spacing:.01em}
 .text-h3{letter-spacing:.015em}
 </style>
+<style id="harmonia-djgrid">
+.dj-wrap{padding-block:clamp(28px,3.5vw,56px)}
+.dj-grid{--dj-gap:clamp(16px,2vw,30px);display:grid;grid-template-columns:repeat(2,1fr);column-gap:var(--dj-gap);row-gap:clamp(30px,3.6vw,52px);max-width:1240px;margin-inline:auto}
+@media (min-width:640px){.dj-grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1024px){.dj-grid{grid-template-columns:repeat(6,1fr)}}
+.dj{display:flex;flex-direction:column;align-items:center;text-align:center}
+.dj-photo{position:relative;width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#0c0c0c}
+.dj-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.dj:hover .dj-photo img{transform:scale(1.06)}
+.dj-photo::after{content:"";position:absolute;top:50%;left:100%;width:var(--dj-gap);height:1px;background:rgba(10,10,10,.18)}
+.dj-name{margin-top:14px;font-size:clamp(11px,.95vw,14px);font-weight:800;text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
+.dj:nth-child(2n) .dj-photo::after{display:none}
+@media (min-width:640px){.dj:nth-child(2n) .dj-photo::after{display:block}.dj:nth-child(3n) .dj-photo::after{display:none}}
+@media (min-width:1024px){.dj:nth-child(3n) .dj-photo::after{display:block}.dj:nth-child(6n) .dj-photo::after{display:none}}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -230,132 +245,82 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 
 	
 			
-		<div class="editorial-grid grid grid-cols-1 lg:grid-cols-4 gap-bigger px-big max-lg:py-bigger lg:pb-huge"><article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/ale-de-tuglie.jpg" alt="Ale De Tuglie" class="w-full h-full object-cover" loading="lazy">
+		<div class="container dj-wrap">
+    <div class="dj-grid">
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/ale-de-tuglie.jpg" alt="Ale De Tuglie" loading="lazy"></div>
+        <span class="dj-name">Ale De Tuglie</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/alessio-cristiano.jpg" alt="Alessio Cristiano" loading="lazy"></div>
+        <span class="dj-name">Alessio Cristiano</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/andrea-oliva.jpg" alt="Andrea Oliva" loading="lazy"></div>
+        <span class="dj-name">Andrea Oliva</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/chelina-manuhutu.jpg" alt="Chelina Manuhutu" loading="lazy"></div>
+        <span class="dj-name">Chelina Manuhutu</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/chris-bowl.jpg" alt="Chris Bowl" loading="lazy"></div>
+        <span class="dj-name">Chris Bowl</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/claudio-pascale.jpg" alt="Claudio Pascale" loading="lazy"></div>
+        <span class="dj-name">Claudio Pascale</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/deborah-de-luca.jpg" alt="Deborah De Luca" loading="lazy"></div>
+        <span class="dj-name">Deborah De Luca</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/elbio-e-denis.jpg" alt="Elbio & Denis" loading="lazy"></div>
+        <span class="dj-name">Elbio & Denis</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/kidoo.jpg" alt="Kidoo" loading="lazy"></div>
+        <span class="dj-name">Kidoo</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/luciano.jpg" alt="Luciano" loading="lazy"></div>
+        <span class="dj-name">Luciano</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/luigi-landolfo.jpg" alt="Luigi Landolfo" loading="lazy"></div>
+        <span class="dj-name">Luigi Landolfo</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/marco-tropeano.jpg" alt="Marco Tropeano" loading="lazy"></div>
+        <span class="dj-name">Marco Tropeano</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/mason-collective.jpg" alt="Mason Collective" loading="lazy"></div>
+        <span class="dj-name">Mason Collective</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/mind-the-gap.jpg" alt="Mind The Gap" loading="lazy"></div>
+        <span class="dj-name">Mind The Gap</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/mita-gami.jpg" alt="Mita Gami" loading="lazy"></div>
+        <span class="dj-name">Mita Gami</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/mrphn.jpg" alt="MRPHN" loading="lazy"></div>
+        <span class="dj-name">MRPHN</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/nic-fanciulli.jpg" alt="Nic Fanciulli" loading="lazy"></div>
+        <span class="dj-name">Nic Fanciulli</span>
+      </div>
+      <div class="dj">
+        <div class="dj-photo"><img src="/harmonia/foto/salome-le-chat.jpg" alt="Salomé Le Chat" loading="lazy"></div>
+        <span class="dj-name">Salomé Le Chat</span>
+      </div>
+    </div>
   </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Ale De Tuglie</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/alessio-cristiano.jpg" alt="Alessio Cristiano" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Alessio Cristiano</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/andrea-oliva.jpg" alt="Andrea Oliva" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Andrea Oliva</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/chelina-manuhutu.jpg" alt="Chelina Manuhutu" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Chelina Manuhutu</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/chris-bowl.jpg" alt="Chris Bowl" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>RESIDENT</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Chris Bowl</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/claudio-pascale.jpg" alt="Claudio Pascale" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>RESIDENT</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Claudio Pascale</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/deborah-de-luca.jpg" alt="Deborah De Luca" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Deborah De Luca</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/elbio-e-denis.jpg" alt="Elbio & Denis" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Elbio & Denis</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/kidoo.jpg" alt="Kidoo" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Kidoo</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/luciano.jpg" alt="Luciano" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Luciano</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/luigi-landolfo.jpg" alt="Luigi Landolfo" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>RESIDENT</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Luigi Landolfo</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/marco-tropeano.jpg" alt="Marco Tropeano" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Marco Tropeano</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/mason-collective.jpg" alt="Mason Collective" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Mason Collective</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/mind-the-gap.jpg" alt="Mind The Gap" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Mind The Gap</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/mita-gami.jpg" alt="Mita Gami" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Mita Gami</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/mrphn.jpg" alt="MRPHN" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">MRPHN</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/nic-fanciulli.jpg" alt="Nic Fanciulli" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Nic Fanciulli</h3>
-</article>
-<article class="editorial-grid-item relative">
-  <div class="aspect-[3/4] overflow-hidden mb-medium">
-    <img src="/harmonia/foto/salome-le-chat.jpg" alt="Salomé Le Chat" class="w-full h-full object-cover" loading="lazy">
-  </div>
-  <div class="editorial-tags text-red flex gap-x-medium flex-wrap"><span>OSPITE</span></div>
-  <h3 class="editorial-title normal-case my-big pb-2">Salomé Le Chat</h3>
-</article></div>
 	
 
 

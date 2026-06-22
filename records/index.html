@@ -245,6 +245,13 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .editorial-content .rz-form-head span{font-size:12px;color:var(--color-gray-400);letter-spacing:.04em}
 .editorial-content .rz-form iframe{display:block;width:100%}
 </style>
+<style id="harmonia-polish2">
+html{scroll-behavior:smooth}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.editorial-content a:focus-visible,.pz-cta:focus-visible{outline:2px solid var(--color-red);outline-offset:3px;border-radius:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1 !important;transform:none !important;transition:none}}
+</style>
 </head>
 <body x-data="cursor" style="zoom: 1;">
 
@@ -319,10 +326,10 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 
 			<p class="rz-lead">L'estensione discografica di Harmonia: lo stesso spirito del club, portato su traccia.</p>
 			<p class="rz-intro">Hai un brano che suona come noi? Inviacelo: arriva dritto in etichetta e lo ascoltiamo davvero.</p>
-			<div class="rz-steps"><span class="rz-step"><span class="rz-n">01</span>Carica la traccia</span><span class="rz-step"><span class="rz-n">02</span>Arriva in etichetta</span><span class="rz-step"><span class="rz-n">03</span>La ascoltiamo</span></div>
-			<div class="rz-form">
+			<div class="rz-steps reveal" x-intersect.once="$el.classList.add('in')"><span class="rz-step"><span class="rz-n">01</span>Carica la traccia</span><span class="rz-step"><span class="rz-n">02</span>Arriva in etichetta</span><span class="rz-step"><span class="rz-n">03</span>La ascoltiamo</span></div>
+			<div class="rz-form reveal" x-intersect.once="$el.classList.add('in')">
 				<div class="rz-form-head"><b>Invia la tua demo</b><span>.mp3 o .wav &middot; max 5 tracce</span></div>
-				<iframe id="trackstack-embed-Harm-Records.ita" title="Invia le tue tracce a HARM Records.ita" src="https://tstack.app/Harm-Records.ita/embed/send?isDarkMode=false" style="height:330px;border:0;background:#fff" scrolling="no" allowtransparency="true"></iframe>
+				<iframe id="trackstack-embed-Harm-Records.ita" title="Invia le tue tracce a HARM Records.ita" src="https://tstack.app/Harm-Records.ita/embed/send?isDarkMode=false" style="height:300px;border:0;background:#fff" scrolling="no" allowtransparency="true"></iframe>
 			</div>
 			<script>
 (function () {

@@ -244,6 +244,22 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 .editorial-content .rz-form-head b{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#0a0a0a}
 .editorial-content .rz-form-head span{font-size:12px;color:var(--color-gray-400);letter-spacing:.04em}
 .editorial-content .rz-form iframe{display:block;width:100%}
+.editorial-content.pz-wrap{max-width:1140px}
+.pz-split{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,56px);align-items:start}
+@media(min-width:980px){.pz-split{grid-template-columns:minmax(0,1.22fr) minmax(0,.88fr)}}
+.pz-split .pz-rows{max-width:none}
+.pz-visual{margin:0}
+.pz-visual img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px}
+@media(min-width:980px){.pz-visual{position:sticky;top:96px}}
+.pz-band{background:var(--color-red);color:#fff;margin-top:0}
+.pz-band .pz-band-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:clamp(20px,3vw,40px);padding:clamp(40px,6vw,76px) 0}
+.pz-band-eyebrow{display:block;letter-spacing:.24em;text-transform:uppercase;font-size:12px;opacity:.82;margin-bottom:12px}
+.pz-band-title{font-size:clamp(26px,3vw,42px);font-weight:800;text-transform:uppercase;line-height:1.02;margin:0}
+.pz-band-actions{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(14px,2vw,24px)}
+.pz-cta-light{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--color-red);padding:15px 30px;border-radius:6px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;transition:transform .2s,opacity .2s}
+.pz-cta-light:hover{transform:translateY(-2px)}
+.pz-band-contacts{font-size:13.5px;color:rgba(255,255,255,.85)}
+.pz-band-contacts a{color:#fff;text-decoration:underline}
 </style>
 <style id="harmonia-polish2">
 html{scroll-behavior:smooth}
@@ -321,20 +337,40 @@ html{scroll-behavior:smooth}
   
   <main id="content" tabindex="-1" class="relative">
     	<div class="container py-bigger">
-		<div class="editorial-content normal-case max-w-4xl">
+		<div class="editorial-content normal-case pz-wrap">
 			<span class="page-eyebrow text-secondary">IL FORMAT</span><h1 class="page-title" style="margin-bottom:var(--spacing-big)">Porta Harmonia nel tuo club</h1>
 
-			<p class="pz-lead">Harmonia non è una serata in affitto: è un format completo che porta il club al centro.</p>
-			<div class="pz-rows">
-				<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">01</span><div><h3 class="pz-rt">Direzione artistica</h3><p class="pz-rp">Lineup curata dal nostro roster esclusivo di DJ. Booking di guest internazionali su richiesta: i cachet si definiscono in base al profilo e alle esigenze di booking.</p></div></div>
-				<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">02</span><div><h3 class="pz-rt">Staging &amp; allestimento</h3><p class="pz-rp">Esperienza visiva su misura: scenografie custom con LED wall, installazioni luminose professionali e merchandising dedicato.</p></div></div>
-				<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">03</span><div><h3 class="pz-rt">Comunicazione</h3><p class="pz-rp">Identità visiva e grafica del brand, branded content, produzione video (teaser e promo), campagne Meta Ads e newsletter verso oltre 10.000 contatti.</p></div></div>
-				<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">04</span><div><h3 class="pz-rt">La collaborazione</h3><p class="pz-rp">Ogni collaborazione è su misura: costruiamo insieme il format e ne definiamo i termini. Comunicazione completa e insegna neon custom incluse (budget advertising escluso).</p></div></div>
+			<div class="pz-split">
+				<div class="pz-main">
+					<p class="pz-lead">Harmonia non è una serata in affitto: è un format completo che porta il club al centro.</p>
+					<div class="pz-rows">
+						<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">01</span><div><h3 class="pz-rt">Direzione artistica</h3><p class="pz-rp">Lineup curata dal nostro roster esclusivo di DJ. Booking di guest internazionali su richiesta: i cachet si definiscono in base al profilo e alle esigenze di booking.</p></div></div>
+						<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">02</span><div><h3 class="pz-rt">Staging &amp; allestimento</h3><p class="pz-rp">Esperienza visiva su misura: scenografie custom con LED wall, installazioni luminose professionali e merchandising dedicato.</p></div></div>
+						<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">03</span><div><h3 class="pz-rt">Comunicazione</h3><p class="pz-rp">Identità visiva e grafica del brand, branded content, produzione video (teaser e promo), campagne Meta Ads e newsletter verso oltre 10.000 contatti.</p></div></div>
+						<div class="pz-row reveal" x-intersect.once="$el.classList.add('in')"><span class="pz-num">04</span><div><h3 class="pz-rt">La collaborazione</h3><p class="pz-rp">Ogni collaborazione è su misura: costruiamo insieme il format e ne definiamo i termini. Comunicazione completa e insegna neon custom incluse (budget advertising escluso).</p></div></div>
+					</div>
+				</div>
+				<aside class="pz-visual">
+					<img src="/harmonia/foto/crowd-1.jpg" alt="Una notte Harmonia" loading="lazy">
+				</aside>
 			</div>
-			<div class="pz-foot reveal" x-intersect.once="$el.classList.add('in')"><a class="pz-cta" href="mailto:harmoniaeventiita@gmail.com">Contattaci <span aria-hidden="true">&rarr;</span></a><span class="pz-contacts"><a href="tel:+393498357483">+39 349 835 7483</a> &middot; <a href="https://www.instagram.com/harmonia.ita/" target="_blank" rel="noopener">@harmonia.ita</a></span></div>
 
 		</div>
 	</div>
+	<section class="pz-band">
+		<div class="container">
+			<div class="pz-band-inner">
+				<div>
+					<span class="pz-band-eyebrow">Pronti a iniziare?</span>
+					<h2 class="pz-band-title">Costruiamo il tuo format</h2>
+				</div>
+				<div class="pz-band-actions">
+					<a class="pz-cta-light" href="mailto:harmoniaeventiita@gmail.com">Contattaci <span aria-hidden="true">&rarr;</span></a>
+					<span class="pz-band-contacts"><a href="tel:+393498357483">+39 349 835 7483</a> &middot; <a href="https://www.instagram.com/harmonia.ita/" target="_blank" rel="noopener">@harmonia.ita</a></span>
+				</div>
+			</div>
+		</div>
+	</section>
 
 					
 							    

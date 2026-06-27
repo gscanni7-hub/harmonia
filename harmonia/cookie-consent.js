@@ -20,7 +20,7 @@
   function injectStyle() {
     if (document.getElementById("hc-style")) return;
     var css = [
-      "#hc-banner,#hc-reopen{font-family:inherit;box-sizing:border-box}",
+      "#hc-banner{font-family:inherit;box-sizing:border-box}",
       "#hc-banner *{box-sizing:border-box}",
       "#hc-banner{position:fixed;left:18px;bottom:18px;z-index:9999;width:min(380px,calc(100vw - 36px));",
         "background:" + ACCENT + ";color:#fff;border-radius:14px;padding:26px 24px 22px;text-transform:none;",
@@ -48,11 +48,7 @@
         "padding:13px 16px;font-size:13px;font-weight:700;letter-spacing:.04em;transition:opacity .2s}",
       ".hc-btn:hover{opacity:.82}",
       ".hc-btn-full{grid-column:1 / -1;margin-top:10px}",
-      "#hc-reopen{position:fixed;left:18px;bottom:18px;z-index:9998;display:none;align-items:center;gap:7px;",
-        "background:" + ACCENT + ";color:#fff;border:0;cursor:pointer;border-radius:999px;padding:11px 16px;",
-        "font-size:12px;font-weight:700;letter-spacing:.08em;box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}",
-      "#hc-reopen:hover{opacity:.9}",
-      "@media (max-width:520px){#hc-banner{left:12px;right:12px;bottom:12px;width:auto}#hc-reopen{left:12px;bottom:12px}}"
+      "@media (max-width:520px){#hc-banner{left:12px;right:12px;bottom:12px;width:auto}}"
     ].join("");
     var s = document.createElement("style");
     s.id = "hc-style";
@@ -99,7 +95,6 @@
     var node = bannerEl;
     setTimeout(function () { if (node && node.parentNode) node.parentNode.removeChild(node); }, 350);
     bannerEl = null;
-    showReopen();
   }
 
   function openBanner() {
@@ -129,27 +124,12 @@
     });
   }
 
-  function showReopen() {
-    injectStyle();
-    var btn = document.getElementById("hc-reopen");
-    if (!btn) {
-      btn = document.createElement("button");
-      btn.id = "hc-reopen";
-      btn.setAttribute("aria-label", "Preferenze cookie");
-      btn.innerHTML = "&#127850; COOKIE";
-      btn.addEventListener("click", function () {
-        btn.style.display = "none";
-        openBanner();
-      });
-      document.body.appendChild(btn);
-    }
-    btn.style.display = "inline-flex";
-  }
+  // esposto per riaprire le preferenze in futuro (es. da un link nel footer): window.HarmoniaCookies.open()
+  window.HarmoniaCookies = { open: openBanner, get: getConsent };
 
   function init() {
     var consent = getConsent();
-    if (consent) { showReopen(); }
-    else { openBanner(); }
+    if (!consent) { openBanner(); }
   }
 
   if (document.readyState === "loading") {

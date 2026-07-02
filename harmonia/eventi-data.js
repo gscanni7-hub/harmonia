@@ -8,7 +8,7 @@ window.HARMONIA_EVENTI = [
   { date:'2026-06-27', title:'Harmonia Capri',          sub:'Hotel Punta Tragara · after Ambasciatori', lineup:'Luigi Landolfo · Jaden Thompson', foto:'people-1', around:'Capri' },
   { date:'2026-07-10', home:true, title:'Harmonia Fondi',          sub:'Gaeta', lineup:'Archie Hamilton · Luigi Landolfo · Roberto Morra', foto:'loc-fondi-gaeta', around:'Fondi · Gaeta' },
   { date:'2026-07-18', home:true, title:'Harmonia Ischia',         sub:'in collaborazione con Atarashi', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'loc-ischia-2026-07-18', around:'Ischia' },
-  { date:'2026-08-01', title:'Harmonia Ischia',         sub:'', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'people-3', around:'Ischia' },
+  { date:'2026-08-01', title:'Harmonia Ischia',         sub:'', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'loc-ischia-2026-08-01', around:'Ischia' },
   { date:'2026-08-07', title:'Harmonia Mykonos',        sub:'', lineup:'Sem Jacobs · Chris Bowl', foto:'loc-mykonos-2026-08-07', around:'Mykonos' },
   { date:'2026-08-17', title:'Harmonia Porto Cervo',    sub:'The Sanctuary', lineup:'Davide Squillace · Luigi Landolfo', foto:'loc-porto-cervo-2026-08-17', around:'Porto Cervo' },
   { date:'2026-08-29', title:'Harmonia Sorrento Coast', sub:'Maya', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Sorrento Coast' },

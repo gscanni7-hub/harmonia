@@ -5,16 +5,16 @@
           foto (nome file in /harmonia/foto senza .jpg), around (etichetta card Around). */
 window.HARMONIA_EVENTI = [
   // --- estate 2026 (prossimi) ---
-  { date:'2026-06-27', home:true, title:'Harmonia Capri',          sub:'Hotel Punta Tragara · after Ambasciatori', lineup:'Luigi Landolfo · Jaden Thompson', foto:'people-1', around:'Capri' },
+  { date:'2026-06-27', title:'Harmonia Capri',          sub:'Hotel Punta Tragara · after Ambasciatori', lineup:'Luigi Landolfo · Jaden Thompson', foto:'people-1', around:'Capri' },
   { date:'2026-07-10', home:true, title:'Harmonia Fondi',          sub:'Gaeta', lineup:'Archie Hamilton · Luigi Landolfo · Roberto Morra', foto:'loc-fondi-gaeta', around:'Fondi · Gaeta' },
-  { date:'2026-07-18', home:true, title:'Harmonia Ischia',         sub:'in collaborazione con Atarashi', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'people-5', around:'Ischia' },
+  { date:'2026-07-18', home:true, title:'Harmonia Ischia',         sub:'in collaborazione con Atarashi', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'loc-ischia-2026-07-18', around:'Ischia' },
   { date:'2026-08-01', title:'Harmonia Ischia',         sub:'', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'people-3', around:'Ischia' },
   { date:'2026-08-07', title:'Harmonia Mykonos',        sub:'', lineup:'Sem Jacobs · Chris Bowl', foto:'people-7', around:'Mykonos' },
   { date:'2026-08-17', title:'Harmonia Porto Cervo',    sub:'The Sanctuary', lineup:'Davide Squillace · Luigi Landolfo', foto:'people-8', around:'Porto Cervo' },
   { date:'2026-08-29', title:'Harmonia Sorrento Coast', sub:'Maya', lineup:'Traumer · Tropeano · Chris Bowl', foto:'crowd-2', around:'Sorrento Coast' },
   // --- archivio (passati) ---
   { date:'2025-10-03', title:'Arenile',          sub:'Napoli',    lineup:'Andrea Oliva · Alessio Cristiano · Luigi Landolfo · Claudio Pascale', foto:'loc-arenile-napoli-2025-10-03', around:'Arenile · Napoli' },
-  { date:'2025-07-18', title:'Negombo',          sub:'Ischia',    lineup:'Mason Collective · Marco Tropeano · Chris Bowl · W/ Atarashi', foto:'loc-negombo-ischia-2025-07-18', around:'Negombo · Ischia' },
+  { date:'2025-07-18', home:true, title:'Negombo',          sub:'Ischia',    lineup:'Mason Collective · Marco Tropeano · Chris Bowl · W/ Atarashi', foto:'loc-negombo-ischia-2025-07-18', around:'Negombo · Ischia' },
   { date:'2025-08-09', title:'Negombo',          sub:'Ischia',    lineup:'Nic Fanciulli · Ale de Tuglie · Chris Bowl · Luigi Landolfo', foto:'nic-fanciulli', around:'Negombo · Ischia' },
   { date:'2025-08-19', home:true, title:'Negombo',          sub:'Ischia',    lineup:'Deborah De Luca · MRPHN', foto:'loc-negombo-ischia-2025-08-19', around:'Negombo · Ischia' },
   { date:'2025-12-12', title:'Forma',            sub:'Napoli',    lineup:'Salome Le Chat · Chris Bowl · Luigi Landolfo · Fabricio', foto:'salome-le-chat', around:'Forma · Napoli' },

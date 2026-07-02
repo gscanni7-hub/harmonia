@@ -75,5 +75,16 @@ window.harmoniaAround = function () {
     .filter(function (e) { return e.home; })
     .map(function (e) { var o = Object.assign({}, e); o._d = window.HARMONIA.parse(e.date); o.soon = o._d >= today; return o; })
     .sort(function (a, b) { return b._d - a._d; });
-  return { around: a, dt: function (d) { return window.HARMONIA.dateParts(d); } };
+  return {
+    around: a,
+    dt: function (d) { return window.HARMONIA.dateParts(d); },
+    // Titolo "Citta · Localita": su desktop resta il puntino, su mobile (via CSS) il
+    // puntino si nasconde e la localita va su una riga pulita.
+    sep: function (t) {
+      var m = t.split(/\s*·\s*/);
+      return m.length > 1
+        ? m[0] + '<span class="ha-sep"> · </span><span class="ha-loc">' + m[1] + '</span>'
+        : t;
+    }
+  };
 };

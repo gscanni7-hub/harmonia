@@ -62,7 +62,11 @@
 }
 .editorial-subtitle {
   line-height: 24px;
-  padding-bottom: 70px;
+  padding-bottom: 24px;
+}
+@media (max-width: 1023px) {
+  .ed-blocks { row-gap: 1rem !important; padding-bottom: 2rem !important; }
+  .ed-blocks h3 { padding-top: 1.5rem !important; }
 }
 @media screen and (min-width: 1024px) {
   .editorial-subtitle {
@@ -312,7 +316,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
 			<h1 class="editorial-title font-extrabold text-big text-big-desktop pb-big">Porta Harmonia nel tuo club</h1>
 			<p class="editorial-subtitle text-gray-400 text-article text-article-desktop">Harmonia non è una serata in affitto: è un format completo. Direzione artistica, allestimento, comunicazione e una community che cresce a ogni data. Un ecosistema che porta il club al centro.</p>
 
-			<div class="grid grid-cols-1 gap-y-bigger font-medium text-article text-article-desktop pb-70">
+			<div class="ed-blocks grid grid-cols-1 gap-y-bigger font-medium text-article text-article-desktop pb-70">
 <h3 class="font-extrabold text-article text-article-desktop pt-big">Direzione artistica</h3>
 <p>Lineup curata dal nostro roster esclusivo di DJ. Booking di guest internazionali disponibile su richiesta: i cachet vengono definiti in base al profilo dell'artista e alle esigenze di booking.</p>
 <h3 class="font-extrabold text-article text-article-desktop pt-big">Staging &amp; allestimento</h3>

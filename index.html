@@ -1112,7 +1112,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
                 </div>
               </div>
             </div>
-            <a href="/eventi" class="absolute inset-0"></a>
+            <a :href="e.tickets || '/eventi'" :target="e.tickets ? '_blank' : '_self'" :rel="e.tickets ? 'noopener' : null" class="absolute inset-0"></a>
           </div>
         </template>
       </div>
@@ -1143,7 +1143,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
   <h2 class="text-h2-medium ww2-title px-big py-big lg:py-bigger">Around</h2>
   <div class="ww2-grid grid grid-cols-2 lg:grid-cols-4 gap-big px-big pb-bigger">
     <template x-for="e in around" :key="e.date+e.title+e.lineup">
-      <a class="event-card2" href="/eventi">
+      <a class="event-card2" :href="e.tickets || '/eventi'" :target="e.tickets ? '_blank' : '_self'" :rel="e.tickets ? 'noopener' : null">
         <div class="event-image-wrapper aspect-[4/5] mb-medium overflow-hidden">
           <template x-if="e.soon"><span class="ww2-soon">Prossimo</span></template>
           <template x-if="e.video">

@@ -9,7 +9,7 @@ window.HARMONIA_EVENTI = [
   { date:'2026-07-10', home:true, title:'Fondi',          venue:'The Sense', sub:'Gaeta', lineup:'Archie Hamilton · Luigi Landolfo · Roberto Morra', foto:'loc-fondi-gaeta', around:'Fondi · Gaeta' },
   { date:'2026-07-18', home:true, title:'Ischia',         venue:'Negombo', sub:'Ischia', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'loc-ischia-2026-07-18', around:'Ischia' },
   { date:'2026-08-01', title:'Ischia',         venue:'Negombo', sub:'Ischia', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'loc-ischia-2026-08-01', around:'Ischia' },
-  { date:'2026-08-07', title:'Mykonos',        venue:'The Paradise', sub:'Mykonos', lineup:'Sem Jacobs · Chris Bowl', foto:'loc-mykonos-2026-08-07', around:'Mykonos' },
+  { date:'2026-08-07', title:'Mykonos',        venue:'Paradise', sub:'Mykonos', lineup:'Sem Jacobs · Chris Bowl', foto:'loc-mykonos-2026-08-07', around:'Mykonos' },
   { date:'2026-08-17', title:'Porto Cervo',    venue:'The Sanctuary', sub:'Porto Cervo', lineup:'Davide Squillace · Luigi Landolfo', foto:'loc-porto-cervo-2026-08-17', around:'Porto Cervo' },
   { date:'2026-08-29', title:'Sorrento Coast', venue:'Maya', sub:'Sorrento Coast', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Sorrento Coast' },
   // --- archivio (passati) ---
@@ -19,9 +19,9 @@ window.HARMONIA_EVENTI = [
   { date:'2025-08-19', home:true, title:'Negombo',          sub:'Ischia',    lineup:'Deborah De Luca · MRPHN', foto:'loc-negombo-ischia-2025-08-19', around:'Negombo · Ischia' },
   { date:'2025-12-12', title:'Forma',            sub:'Napoli',    lineup:'Salome Le Chat · Chris Bowl · Luigi Landolfo · Fabricio', foto:'salome-le-chat', around:'Forma · Napoli' },
   { date:'2026-01-03', home:true, title:'Chalet Valentino', sub:'Roccaraso', lineup:'Marco Tropeano · Mind The Gap · Luigi Landolfo', foto:'loc-chalet-valentino-2026-01-03', around:'Chalet Valentino · Roccaraso' },
-  { date:'2026-02-13', home:true, title:'Duel',             sub:'Napoli',    lineup:'Kidoo · Elbio & Denis · Chris Bowl · Claudio Pascale', foto:'loc-duel-napoli-2026-02-13', around:'Duel · Napoli' },
+  { date:'2026-02-13', home:true, title:'Duel Club',             sub:'Napoli',    lineup:'Kidoo · Elbio & Denis · Chris Bowl · Claudio Pascale', foto:'loc-duel-napoli-2026-02-13', around:'Duel Club · Napoli' },
   { date:'2026-02-27', home:true, title:'The Circle',       sub:'Roma',      lineup:'Joey Daniel · Luigi Landolfo · Gianluca Luciani', foto:'loc-the-circle-roma-2026-02-27', around:'The Circle · Roma' },
-  { date:'2026-03-27', video:'2026-03-27.mp4', title:'Duel',             sub:'Napoli',    lineup:'Mita Gami · La Hara · Luigi Landolfo · W/ Maya elements', foto:'mita-gami', around:'Duel · Napoli' },
+  { date:'2026-03-27', video:'2026-03-27.mp4', title:'Duel Club',             sub:'Napoli',    lineup:'Mita Gami · La Hara · Luigi Landolfo · W/ Maya elements', foto:'mita-gami', around:'Duel Club · Napoli' },
   { date:'2026-04-25', home:true, title:'Maya',             sub:'Sorrento',  lineup:'Chelina Manuhutu · Alessio Cristiano · Claudio Pascale · Cristian Volpe · Julia', foto:'loc-maya-sorrento-2026-04-25', around:'Maya · Sorrento' },
   { date:'2026-05-30', video:'2026-05-30.mp4', title:'Maya',             sub:'Sorrento',  lineup:'Luciano · Cesar Merveille · La Hara · Luigi Landolfo · Ludo Erre · W/ Maya elements & Global Iconics', foto:'crowd-2', around:'Maya · Sorrento' }
 ];

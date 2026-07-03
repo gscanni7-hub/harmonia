@@ -386,7 +386,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       <template x-for="e in upcoming" :key="e.date+e.title">
         <a class="ag-row" href="/eventi">
           <span class="ag-date"><span class="ag-d" x-text="dt(e.date).gg"></span><span class="ag-m" x-text="dt(e.date).m"></span></span>
-          <span class="ag-place"><span x-text="e.title"></span><template x-if="e.sub"><span class="ag-venue" x-text="e.sub"></span></template></span>
+          <span class="ag-place"><span x-text="e.venue || e.title"></span><template x-if="e.sub"><span class="ag-venue" x-text="e.sub"></span></template></span>
           <span class="ag-line" x-text="e.lineup"></span>
           <span class="ag-go" aria-hidden="true">&#8599;</span>
         </a>
@@ -409,7 +409,7 @@ section.bg-white .grid a.group:hover img{transform:scale(1.05)}
       <template x-for="e in past" :key="e.date+e.title">
         <div class="ag-row">
           <span class="ag-date"><span class="ag-d" x-text="dt(e.date).gg"></span><span class="ag-m" x-text="dt(e.date).m"></span></span>
-          <span class="ag-place"><span x-text="e.title"></span><template x-if="e.sub"><span class="ag-venue" x-text="e.sub"></span></template></span>
+          <span class="ag-place"><span x-text="e.venue || e.title"></span><template x-if="e.sub"><span class="ag-venue" x-text="e.sub"></span></template></span>
           <span class="ag-line" x-text="e.lineup"></span>
         </div>
       </template>

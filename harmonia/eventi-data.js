@@ -5,13 +5,13 @@
           foto (nome file in /harmonia/foto senza .jpg), around (etichetta card Around). */
 window.HARMONIA_EVENTI = [
   // --- estate 2026 (prossimi) ---
-  { date:'2026-06-27', title:'Capri',          sub:'Hotel Punta Tragara · after Ambasciatori', lineup:'Luigi Landolfo · Jaden Thompson', foto:'people-1', around:'Capri' },
-  { date:'2026-07-10', home:true, title:'Fondi',          sub:'Gaeta', lineup:'Archie Hamilton · Luigi Landolfo · Roberto Morra', foto:'loc-fondi-gaeta', around:'Fondi · Gaeta' },
-  { date:'2026-07-18', home:true, title:'Ischia',         sub:'', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'loc-ischia-2026-07-18', around:'Ischia' },
-  { date:'2026-08-01', title:'Ischia',         sub:'', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'loc-ischia-2026-08-01', around:'Ischia' },
-  { date:'2026-08-07', title:'Mykonos',        sub:'', lineup:'Sem Jacobs · Chris Bowl', foto:'loc-mykonos-2026-08-07', around:'Mykonos' },
-  { date:'2026-08-17', title:'Porto Cervo',    sub:'The Sanctuary', lineup:'Davide Squillace · Luigi Landolfo', foto:'loc-porto-cervo-2026-08-17', around:'Porto Cervo' },
-  { date:'2026-08-29', title:'Sorrento Coast', sub:'Maya', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Sorrento Coast' },
+  { date:'2026-06-27', title:'Punta Tragara',          sub:'Capri', lineup:'Luigi Landolfo · Jaden Thompson', foto:'people-1', around:'Capri' },
+  { date:'2026-07-10', home:true, title:'Fondi',          venue:'The Sense', sub:'Gaeta', lineup:'Archie Hamilton · Luigi Landolfo · Roberto Morra', foto:'loc-fondi-gaeta', around:'Fondi · Gaeta' },
+  { date:'2026-07-18', home:true, title:'Ischia',         venue:'Negombo', sub:'Ischia', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'loc-ischia-2026-07-18', around:'Ischia' },
+  { date:'2026-08-01', title:'Ischia',         venue:'Negombo', sub:'Ischia', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'loc-ischia-2026-08-01', around:'Ischia' },
+  { date:'2026-08-07', title:'Mykonos',        venue:'The Paradise', sub:'Mykonos', lineup:'Sem Jacobs · Chris Bowl', foto:'loc-mykonos-2026-08-07', around:'Mykonos' },
+  { date:'2026-08-17', title:'Porto Cervo',    venue:'The Sanctuary', sub:'Porto Cervo', lineup:'Davide Squillace · Luigi Landolfo', foto:'loc-porto-cervo-2026-08-17', around:'Porto Cervo' },
+  { date:'2026-08-29', title:'Sorrento Coast', venue:'Maya', sub:'Sorrento Coast', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Sorrento Coast' },
   // --- archivio (passati) ---
   { date:'2025-10-03', title:'Arenile',          sub:'Napoli',    lineup:'Andrea Oliva · Alessio Cristiano · Luigi Landolfo · Claudio Pascale', foto:'loc-arenile-napoli-2025-10-03', around:'Arenile · Napoli' },
   { date:'2025-07-18', home:true, title:'Negombo',          sub:'Ischia',    lineup:'Mason Collective · Marco Tropeano · Chris Bowl · W/ Atarashi', foto:'loc-negombo-ischia-2025-07-18', around:'Negombo · Ischia' },

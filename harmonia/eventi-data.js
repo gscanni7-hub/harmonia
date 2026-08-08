@@ -8,12 +8,12 @@
 window.HARMONIA_EVENTI = [
   // --- estate 2026 (prossimi) ---
   { date:'2026-06-27', title:'Punta Tragara',          sub:'Capri', lineup:'Luigi Landolfo · Jaden Thompson', foto:'people-1', around:'Capri' },
-  { date:'2026-07-10', home:true, title:'Fondi',          venue:'The Sense', sub:'Gaeta', tickets:'https://www.i-ticket.it/eventi/absence-x-harmonia-the-senses-biglietti', lineup:'Archie Hamilton · Luigi Landolfo · Roberto Morra', foto:'loc-fondi-gaeta', around:'Fondi · Gaeta' },
-  { date:'2026-07-18', home:true, title:'Ischia',         venue:'Negombo', sub:'Ischia', tickets:'https://www.fourvenues.com/harmonia1/6HJX', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'loc-ischia-2026-07-18', around:'Ischia', gallery:135 },
-  { date:'2026-08-01', title:'Ischia',         venue:'Negombo', sub:'Ischia', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'loc-ischia-2026-08-01', around:'Ischia', gallery:116 },
-  { date:'2026-08-08', title:'Acciaroli',      venue:'Torre Caleo', sub:'Acciaroli', lineup:'Koko · Romano Alfieri · Davide Piccolo', foto:'loc-acciaroli-2026-08-08', around:'Acciaroli' },
-  { date:'2026-08-17', home:true, title:'Porto Cervo',    venue:'The Sanctuary', sub:'Porto Cervo', lineup:'Davide Squillace · Luigi Landolfo', foto:'loc-porto-cervo-2026-08-17', around:'Porto Cervo' },
-  { date:'2026-08-29', home:true, title:'Sorrento Coast', venue:'Maya', sub:'Sorrento Coast', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Sorrento Coast' },
+  { date:'2026-07-10', home:true, title:'Fondi',          venue:'The Sense', sub:'Gaeta', tickets:'https://www.i-ticket.it/eventi/absence-x-harmonia-the-senses-biglietti', lineup:'Archie Hamilton · Luigi Landolfo · Roberto Morra', foto:'loc-fondi-gaeta', around:'The Sense · Gaeta' },
+  { date:'2026-07-18', home:true, title:'Ischia',         venue:'Negombo', sub:'Ischia', tickets:'https://www.fourvenues.com/harmonia1/6HJX', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'loc-ischia-2026-07-18', around:'Negombo · Ischia', gallery:135 },
+  { date:'2026-08-01', title:'Ischia',         venue:'Negombo', sub:'Ischia', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'loc-ischia-2026-08-01', around:'Negombo · Ischia', gallery:116 },
+  { date:'2026-08-08', title:'Acciaroli',      venue:'Torre Caleo', sub:'Acciaroli', lineup:'Koko · Romano Alfieri · Davide Piccolo', foto:'loc-acciaroli-2026-08-08', around:'Torre Caleo · Acciaroli' },
+  { date:'2026-08-17', home:true, title:'Porto Cervo',    venue:'The Sanctuary', sub:'Porto Cervo', lineup:'Davide Squillace · Luigi Landolfo', foto:'loc-porto-cervo-2026-08-17', around:'The Sanctuary · Porto Cervo' },
+  { date:'2026-08-29', home:true, title:'Sorrento Coast', venue:'Maya', sub:'Sorrento Coast', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Maya · Sorrento Coast' },
   // --- archivio (passati) ---
   { date:'2025-10-03', title:'Arenile',          sub:'Napoli',    lineup:'Andrea Oliva · Alessio Cristiano · Luigi Landolfo · Claudio Pascale', foto:'loc-arenile-napoli-2025-10-03', around:'Arenile · Napoli' },
   { date:'2025-07-18', title:'Negombo',          sub:'Ischia',    lineup:'Mason Collective · Marco Tropeano · Chris Bowl · W/ Atarashi', foto:'loc-negombo-ischia-2025-07-18', around:'Negombo · Ischia' },

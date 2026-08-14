@@ -11,7 +11,7 @@ window.HARMONIA_EVENTI = [
   { date:'2026-07-10', home:true, title:'Fondi',          venue:'The Sense', sub:'Gaeta', tickets:'https://www.i-ticket.it/eventi/absence-x-harmonia-the-senses-biglietti', lineup:'Archie Hamilton · Luigi Landolfo · Roberto Morra', foto:'loc-fondi-gaeta', around:'The Sense · Gaeta' },
   { date:'2026-07-18', home:true, title:'Ischia',         venue:'Negombo', sub:'Ischia', tickets:'https://www.fourvenues.com/harmonia1/6HJX', lineup:'DJ Tennis · Chris Bowl · Luigi Landolfo', foto:'loc-ischia-2026-07-18', around:'Negombo · Ischia', gallery:135 },
   { date:'2026-08-01', title:'Ischia',         venue:'Negombo', sub:'Ischia', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'loc-ischia-2026-08-01', around:'Negombo · Ischia', gallery:116 },
-  { date:'2026-08-08', title:'Acciaroli',      venue:'Torre Caleo', sub:'Acciaroli', lineup:'Koko · Romano Alfieri · Davide Piccolo', foto:'loc-acciaroli-2026-08-08', around:'Torre Caleo · Acciaroli' },
+  { date:'2026-08-08', title:'Acciaroli',      venue:'Torre Caleo', sub:'Acciaroli', lineup:'Koko · Romano Alfieri · Davide Piccolo', foto:'loc-acciaroli-2026-08-08', around:'Torre Caleo · Acciaroli', gallery:98 },
   { date:'2026-08-17', home:true, title:'Porto Cervo',    venue:'The Sanctuary', sub:'Porto Cervo', lineup:'Davide Squillace · Luigi Landolfo', foto:'loc-porto-cervo-2026-08-17', around:'The Sanctuary · Porto Cervo' },
   { date:'2026-08-29', home:true, title:'Sorrento Coast', venue:'Maya', sub:'Sorrento Coast', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Maya · Sorrento Coast' },
   // --- archivio (passati) ---

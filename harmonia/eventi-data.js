@@ -13,7 +13,7 @@ window.HARMONIA_EVENTI = [
   { date:'2026-08-01', title:'Ischia',         venue:'Negombo', sub:'Ischia', lineup:'Saraga · Tropeano · Luigi Landolfo', foto:'loc-ischia-2026-08-01', around:'Negombo · Ischia', gallery:116 },
   { date:'2026-08-08', title:'Acciaroli',      venue:'Torre Caleo', sub:'Acciaroli', lineup:'Koko · Romano Alfieri · Davide Piccolo', foto:'loc-acciaroli-2026-08-08', around:'Torre Caleo · Acciaroli', gallery:98 },
   { date:'2026-08-17', home:true, title:'Porto Cervo',    venue:'The Sanctuary', sub:'Porto Cervo', lineup:'Davide Squillace · Luigi Landolfo', foto:'loc-porto-cervo-2026-08-17', around:'The Sanctuary · Porto Cervo' },
-  { date:'2026-08-29', home:true, title:'Sorrento Coast', venue:'Maya', sub:'Sorrento Coast', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Maya · Sorrento Coast' },
+  { date:'2026-08-29', home:true, title:'Sorrento Coast', venue:'Maya', sub:'Sorrento Coast', tickets:'https://maya-elements.com/eventi/event?evento=uPWJGGcXcLrEXgJvR6if&pr=AJACiUAasdAFVDHR', lineup:'Traumer · Tropeano · Chris Bowl', foto:'loc-sorrento-coast-2026-08-29', around:'Maya · Sorrento Coast' },
   // --- archivio (passati) ---
   { date:'2025-10-03', title:'Arenile',          sub:'Napoli',    lineup:'Andrea Oliva · Alessio Cristiano · Luigi Landolfo · Claudio Pascale', foto:'loc-arenile-napoli-2025-10-03', around:'Arenile · Napoli' },
   { date:'2025-07-18', title:'Negombo',          sub:'Ischia',    lineup:'Mason Collective · Marco Tropeano · Chris Bowl · W/ Atarashi', foto:'loc-negombo-ischia-2025-07-18', around:'Negombo · Ischia' },

@@ -57,7 +57,11 @@ window.harmoniaAgenda = function () {
 };
 window.harmoniaPills = function () {
   var s = window.HARMONIA.split();
-  var list = s.upcoming.length ? s.upcoming : s.past.slice(0, 7);
+  // Carosello sempre pieno: prima i prossimi eventi, poi i passati piu recenti (max 7).
+  // "soon" = evento futuro (card a colori); i passati vanno in bianco e nero via CSS.
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var list = s.upcoming.concat(s.past).slice(0, 7);
+  list.forEach(function (e) { e.soon = e._d >= today; });
   return {
     pills: list,
     dt: function (d) { return window.HARMONIA.dateParts(d); },

@@ -57,10 +57,13 @@ window.harmoniaAgenda = function () {
 };
 window.harmoniaPills = function () {
   var s = window.HARMONIA.split();
-  // Carosello sempre pieno: prima i prossimi eventi, poi i passati piu recenti (max 7).
+  // Carosello sempre pieno: prima i prossimi eventi, poi i passati piu recenti (max 8),
+  // ma SOLO eventi con locandina vera (foto 'loc-...'); gli altri vengono saltati.
   // "soon" = evento futuro (card a colori); i passati vanno in bianco e nero via CSS.
   var today = new Date(); today.setHours(0, 0, 0, 0);
-  var list = s.upcoming.concat(s.past).slice(0, 7);
+  var list = s.upcoming.concat(s.past)
+    .filter(function (e) { return e.foto && e.foto.indexOf('loc-') === 0; })
+    .slice(0, 8);
   list.forEach(function (e) { e.soon = e._d >= today; });
   return {
     pills: list,

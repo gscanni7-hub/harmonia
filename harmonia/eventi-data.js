@@ -55,7 +55,10 @@ window.HARMONIA = {
 
 window.harmoniaAgenda = function () {
   var s = window.HARMONIA.split();
-  return { upcoming: s.upcoming, past: s.past, dt: function (d) { return window.HARMONIA.dateParts(d); } };
+  // nb(): i nomi degli artisti non vanno mai a capo a meta' (spazio -> no-break),
+  // la riga si spezza solo al separatore ' · ' tra un artista e l'altro.
+  var nb = function (t) { return (t || '').split(' · ').map(function (n) { return n.replace(/ /g, '\u00A0'); }).join(' · '); };
+  return { upcoming: s.upcoming, past: s.past, nb: nb, dt: function (d) { return window.HARMONIA.dateParts(d); } };
 };
 window.harmoniaPills = function () {
   var s = window.HARMONIA.split();
